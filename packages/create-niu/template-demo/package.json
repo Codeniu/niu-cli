@@ -1,0 +1,12 @@
+{
+  "name": "template-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run dev"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  }
+}

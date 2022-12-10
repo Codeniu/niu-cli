@@ -1,0 +1,31 @@
+{
+  "name": "create-niu",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "codeniu",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "create-niu": "index.js",
+    "cnu": "index.js"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codeniu/niu-cli.git",
+    "directory": "packages/create-niu"
+  },
+  "devDependencies": {
+    "kolorist": "^1.6.0",
+    "minimist": "^1.2.7",
+    "prompts": "^2.4.2"
+  }
+}
