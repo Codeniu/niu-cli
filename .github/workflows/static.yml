@@ -13,16 +13,24 @@ jobs:
     steps:
       - name: "Checkout codes"
         uses: actions/checkout@v1
+
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
           node-version: "14"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
       - name: Install dependencies
         run: cd packages/docs-ui && npm install
+
       - name: Build
         run: npm run docs:build
+
       - name: Show Log
         run: ls
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
