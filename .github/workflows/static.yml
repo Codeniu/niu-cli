@@ -17,9 +17,8 @@ jobs:
         uses: actions/setup-node@main
         with:
           node-version: "14"
-      - name: CD Dir
-        run: cd packages/docs-ui
       - name: Install dependencies
+        run: cd packages/docs-ui
         run: npm install
       - name: Build
         run: npm run docs:build
