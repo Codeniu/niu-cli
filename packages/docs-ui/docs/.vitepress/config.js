@@ -5,6 +5,8 @@ const componentItmes = getComponetnsItem()
 const config = {
   title: 'niu-ui',
 
+  base: '/niu-cli/',
+
   description: 'Just playing around.',
   themeConfig: {
     logo: '/logo.png',
