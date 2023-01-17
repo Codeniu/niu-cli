@@ -14,10 +14,27 @@ export function getComponetnsItem() {
   const files = fs.readdirSync(componentsDir)
   console.log('files: ', files)
 
-  files.forEach((file) => {
+  // 文件夹
+  const dirNames = files.filter((file) =>
+    fs.statSync(path.resolve(componentsDir, file)).isDirectory()
+  )
+
+  // md 文件
+  const fileNames = files
+    .filter((file) => fs.statSync(path.resolve(componentsDir, file)).isFile())
+    .map((file) => file.replace(/(.md)$/, ''))
+
+  dirNames.forEach((file) => {
     componetsItem.push({
       text: file,
       link: `/components/${file}/index`
+    })
+  })
+
+  fileNames.forEach((file) => {
+    componetsItem.push({
+      text: file,
+      link: `/components/${file}`
     })
   })
 
