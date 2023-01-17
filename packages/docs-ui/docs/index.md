@@ -6,7 +6,7 @@ titleTemplate: Vite & Vue Powered Static Site Generator
 
 hero:
   name: NiuUI
-  text: This is Some UI component with Vue
+  text: This is a UI Library for Vue
   tagline: 使用Vue开发的一些零依赖的简单小组件
   actions:
     - theme: brand
