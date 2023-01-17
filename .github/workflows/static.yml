@@ -1,4 +1,4 @@
-name: 'GitHub Actions Deploy Bot'
+name: "GitHub Actions Deploy Bot"
 
 on:
   push:
@@ -11,12 +11,14 @@ jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout codes'
+      - name: "Checkout codes"
         uses: actions/checkout@v1
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
-          node-version: '14'
+          node-version: "14"
+      - name: CD Dir
+        run: cd packages\docs-ui
       - name: Install dependencies
         run: npm install
       - name: Build
