@@ -1,28 +1,3 @@
-# PicWrap
-
-图片等比缩放容器
-
-当页面宽度变化时,图片大小等比缩放
-
-## Example
-
-<PicWrap />
-
-改变浏览器窗口宽度试试效果吧
-
-## 解析
-
-核心代码如下,高宽比：0.65
-
-``` css
-&-cover {
-  padding-bottom: 65%;
-}
-```
-
-## 源码
-
-```vue
 <template>
   <ul class="card-wrapper" v-if="list.length > 0">
     <li v-for="item in list" :key="item.id">
@@ -109,5 +84,3 @@ const list = ref<any>([
   }
 }
 </style>
-
-```
