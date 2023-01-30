@@ -1,7 +1,7 @@
 import BasicTitle from '../../../src/basicTitle/index.vue'
 import NDivider from '../../../src/divider/index.vue'
 import NNav from '../../../src/nav/index.vue'
-import PicWrap from '../../../src/picWrap/index.vue'
+import PicWrap from '../../../src/PicWrap/index.vue'
 
 export function useComponents(app) {
   app.component('BasicTitle', BasicTitle)
