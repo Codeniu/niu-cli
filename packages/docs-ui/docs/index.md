@@ -2,7 +2,7 @@
 layout: home
 
 title: Niuui
-titleTemplate: Vite & Vue Powered Static Site Generator
+titleTemplate: NNNNNNIUUUUU CODENIU
 
 hero:
   name: NiuUI
