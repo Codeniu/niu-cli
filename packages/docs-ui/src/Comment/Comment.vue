@@ -104,6 +104,7 @@ function handleShowComment() {
     }
 
     &__info {
+      flex: 1;
       display: flex;
       justify-content: space-between;
       align-items: center;

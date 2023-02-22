@@ -7,12 +7,12 @@
 </template>
 
 <script lang="ts">
-defineComponent({
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'BasicTitle'
 })
 </script>
-<script lang="ts" setup>
-import { defineComponent } from 'vue'
+<script lang="ts" setup name="BasicTitle">
 defineProps({
   title: String,
   subtitle: String

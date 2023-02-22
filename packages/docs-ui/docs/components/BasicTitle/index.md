@@ -4,28 +4,22 @@
 
 ## How to use
 
-<BasicTitle
-  title="课程预告"
-  subtitle="UPCOMING CLASSES"
-  style="background-color: #fff; margin-bottom: 20px"
->
-</BasicTitle>
-
-<details>
-  <summary>查看代码</summary>
+<Wrap >
+  <BasicTitle
+    title="课程预告"
+    subtitle="UPCOMING CLASSES"
+    style="background-color: #fff; margin-bottom: 20px"
+  >
+  </BasicTitle>
+</Wrap>
 
   ```vue
-  <template>
-  <div style="margin-bottom:20px;">
-      <BasicTitle
-        title="标题名称"
-        subtitle="SUB TITLE"
-      />
-  </div>
-  </template>
+  <BasicTitle
+    title="课程预告"
+    subtitle="UPCOMING CLASSES"
+    style="background-color: #fff; margin-bottom: 20px"
+  />
   ```
-
-</details>
 
 ## 源码
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div>
     <RadioButtonGroup
       v-model="formState.major"
       :options="[
@@ -35,13 +35,6 @@ const formState = reactive({
 </script>
 
 <style lang="less" scoped>
-.wrap {
-  border: 1px solid #999;
-  border-radius: 10px;
-  padding: 10px;
-  min-height: 120px;
-}
-
 .show {
   span:first-child {
     font-weight: bold;

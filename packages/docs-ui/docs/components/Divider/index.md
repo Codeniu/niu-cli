@@ -8,7 +8,9 @@
 
 ### simple example
 
-<NDivider></NDivider>
+<Wrap>
+  <NDivider></NDivider>
+</Wrap>
 
 ```vue
 <NDivider></NDivider>
@@ -16,19 +18,25 @@
 
 ### set text
 
-<NDivider> This is a divider </NDivider>
+<Wrap>
+  <NDivider> This is a divider </NDivider>
+</Wrap>
 
 ```vue
 <NDivider> This is a divider </NDivider>
 ```
 
-<NDivider content-position="center"> text on center </NDivider>
+<Wrap>
+  <NDivider content-position="center"> text on center </NDivider>
+</Wrap>
 
 ```vue
 <NDivider content-position="center"> text on center </NDivider>
 ```
 
-<NDivider content-position="right"> text on right </NDivider>
+<Wrap>
+  <NDivider content-position="right"> text on right </NDivider>
+</Wrap>
 
 ```vue
 <NDivider content-position="right"> text on right </NDivider>
@@ -36,7 +44,9 @@
 
 ### hidden-preset
 
-<NDivider hidden-preset> text on left </NDivider>
+<Wrap>
+  <NDivider hidden-preset> text on left </NDivider>
+</Wrap>
 
 ```vue
 <NDivider hidden-preset> text on left </NDivider>

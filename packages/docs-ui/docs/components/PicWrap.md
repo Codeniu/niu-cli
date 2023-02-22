@@ -6,7 +6,9 @@
 
 ## Example
 
-<PicWrap />
+<Wrap>
+  <PicWrap />
+</Wrap>
 
 改变浏览器窗口宽度试试效果吧
 

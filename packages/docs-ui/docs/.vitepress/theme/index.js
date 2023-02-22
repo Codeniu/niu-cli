@@ -1,12 +1,17 @@
 import DefaultTheme from 'vitepress/theme'
-import { useComponents } from './useComponents'
-// import NiuUI from '../../../src/entity'
+
+import '../../public/index.less'
+import Wrap from './Wrap.vue'
+
+import entity from '../../../src/entity'
 
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
-    // ctx.app.use(NiuUI)
-    useComponents(ctx.app)
+
+    ctx.app.component('Wrap', Wrap)
+
+    entity.install(ctx.app)
   }
 }

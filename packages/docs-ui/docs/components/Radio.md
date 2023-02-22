@@ -2,7 +2,9 @@
 
 ## Example
 
-<NRadioButton />
+<Wrap>
+  <NRadioButton />
+</Wrap>
 
 <details>
   <summary>使用方法</summary>
@@ -51,8 +53,6 @@ const formState = reactive({
 | v-model | 绑定值                                                       |
 | options | 选项，数组类型，`{label: string，value: any}`                |
 | @change | 当绑定值发生变化时触发，参数（{item={label: string，value: any},val:string}） |
-
-
 
 ## 源码
 

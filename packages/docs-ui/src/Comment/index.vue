@@ -1,12 +1,12 @@
 <template>
-  <div class="wrap">
+  <Wrap>
     <Comment
       v-for="item in commentsList"
       :key="item.id"
       :info="item"
       @change="commentChange"
     />
-  </div>
+  </Wrap>
 </template>
 
 <script lang="ts" setup>
@@ -49,11 +49,3 @@ function commentChange() {
   console.log('123')
 }
 </script>
-
-<style lang="less" scoped>
-.wrap {
-  border: 1px solid #999;
-  border-radius: 10px;
-  padding: 10px;
-}
-</style>

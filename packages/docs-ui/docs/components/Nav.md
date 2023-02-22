@@ -4,9 +4,11 @@
 
 ## Example
 
-<div style="width:100%;overflow:auto">
-  <NNav></NNav>
-</div>
+<Wrap>
+  <div style="width:100%;overflow:auto">
+    <NNav></NNav>
+  </div>
+</Wrap>
 
 ```vue
 <NNav></NNav>
