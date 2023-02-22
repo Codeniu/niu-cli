@@ -1,11 +1,11 @@
-import BasicTitle from './basicTitle/index.vue'
-import NDivider from './divider/index.vue'
-import NNav from './nav/index.vue'
+import BasicTitle from './BasicTitle/index.vue'
+import NDivider from './Divider/index.vue'
+import NNav from './Nav/index.vue'
 import NPicWrap from './PicWrap/index.vue'
-import NComment from './comment/index.vue'
-import NRadioButton from './radioButtonGroup/demo.vue'
-import NSteps from './steps/index.vue'
-import MileStone from './steps/demo/index.vue'
+import NComment from './Comment/index.vue'
+import NRadioButton from './RadioButtonGroup/demo.vue'
+import NSteps from './Steps/index.vue'
+import MileStone from './Steps/demo/index.vue'
 
 // 导出单独组件
 export { BasicTitle }
