@@ -5,6 +5,7 @@ import PicWrap from './picWrap/index.vue'
 import Comment from './comment/index.vue'
 import NRadioButton from './radioButtonGroup/demo.vue'
 import NSteps from './steps/index.vue'
+import MileStone from './steps/demo/index.vue'
 
 // 导出单独组件
 export { BasicTitle }
@@ -19,6 +20,8 @@ export default {
     app.component('PicWrap', PicWrap)
     app.component('Comment', Comment)
     app.component('NRadioButton', NRadioButton)
+
     app.component('NSteps', NSteps)
+    app.component('MileStone', MileStone)
   }
 }
