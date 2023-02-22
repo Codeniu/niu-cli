@@ -13,7 +13,7 @@
   </ul>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="NPicWrap">
 import { ref } from 'vue'
 
 const list = ref<any>([
