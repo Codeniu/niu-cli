@@ -2,14 +2,14 @@
 
 ## Example
 
-<Comment />
+<NComment />
 <details>
   <summary>查看代码</summary>
   
   ```vue
   <template>
     <div>
-      <Comment
+      <NComment
         v-for="item in commentsList"
         :key="item.id"
         :info="item"

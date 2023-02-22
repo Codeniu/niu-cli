@@ -1,8 +1,8 @@
 import BasicTitle from './basicTitle/index.vue'
 import NDivider from './divider/index.vue'
 import NNav from './nav/index.vue'
-import PicWrap from './picWrap/index.vue'
-import Comment from './comment/index.vue'
+import NPicWrap from './picWrap/index.vue'
+import NComment from './comment/index.vue'
 import NRadioButton from './radioButtonGroup/demo.vue'
 import NSteps from './steps/index.vue'
 import MileStone from './steps/demo/index.vue'
@@ -17,8 +17,8 @@ export default {
 
     app.component('NDivider', NDivider)
     app.component('NNav', NNav)
-    app.component('PicWrap', PicWrap)
-    app.component('Comment', Comment)
+    app.component('NPicWrap', NPicWrap)
+    app.component('NComment', NComment)
     app.component('NRadioButton', NRadioButton)
 
     app.component('NSteps', NSteps)
