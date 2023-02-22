@@ -93,7 +93,6 @@
           :class="{ 'comment-top__info-btn--active': showComment }"
           @click="handleShowComment"
         >
-          <!-- <SvgIcon name="reply" /> -->
           {{ showComment ? '取消' : '回复' }}
         </span>
       </div>

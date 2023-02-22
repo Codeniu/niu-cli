@@ -1,9 +1,9 @@
 import BasicTitle from './basicTitle/index.vue'
 import NDivider from './divider/index.vue'
 import NNav from './nav/index.vue'
-import PicWrap from './PicWrap/index.vue'
-import Comment from './Comment/index.vue'
-import NRadioButton from './RadioButtonGroup/demo.vue'
+import PicWrap from './picWrap/index.vue'
+import Comment from './comment/index.vue'
+import NRadioButton from './radioButtonGroup/demo.vue'
 
 // 导出单独组件
 export { BasicTitle }

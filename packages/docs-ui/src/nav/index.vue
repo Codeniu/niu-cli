@@ -11,7 +11,6 @@
           :key="item.link"
           @click="linkTo(item)"
         >
-          <!-- <SvgIcon :name="item.icon" size="48" class="menu-item__icon" /> -->
           <img :src="item.icon" size="48" class="menu-item__icon" />
           <div class="menu-item__info">
             <span class="menu-item__info-name">
