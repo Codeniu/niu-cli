@@ -2,7 +2,9 @@ import DefaultTheme from 'vitepress/theme'
 
 import Wrap from './Wrap.vue'
 
-import entity from '../../../src/entity'
+import { useComponents } from './useComponents'
+
+// import entity from '../../../src/entity'
 
 export default {
   ...DefaultTheme,
@@ -11,6 +13,8 @@ export default {
 
     ctx.app.component('Wrap', Wrap)
 
-    entity.install(ctx.app)
+    // entity.install(ctx.app)
+
+    useComponents(ctx.app)
   }
 }

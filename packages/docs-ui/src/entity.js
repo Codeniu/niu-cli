@@ -8,7 +8,16 @@ import NSteps from './Steps/index.vue'
 import MileStone from './Steps/demo/index.vue'
 
 // 导出单独组件
-export { BasicTitle }
+export {
+  BasicTitle,
+  NDivider,
+  NNav,
+  NPicWrap,
+  NComment,
+  NRadioButton,
+  NSteps,
+  MileStone
+}
 
 // 引用
 export default {
