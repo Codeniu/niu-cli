@@ -15,7 +15,7 @@
   position: relative;
   border: 1px solid #99999930;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
 
   .tag {
     position: absolute;
