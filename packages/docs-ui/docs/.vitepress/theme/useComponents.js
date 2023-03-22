@@ -6,6 +6,7 @@ import NComment from '../../../src/Comment/index.vue'
 import NRadioButton from '../../../src/RadioButtonGroup/demo.vue'
 import NSteps from '../../../src/Steps/index.vue'
 import MileStone from '../../../src/Steps/demo/index.vue'
+import FlowNotice from '../../../src/FlowNotice/demo.vue'
 
 import Wrap from './Wrap.vue'
 
@@ -21,4 +22,6 @@ export function useComponents(app) {
   app.component('MileStone', MileStone)
 
   app.component('Wrap', Wrap)
+
+  app.component('FlowNotice', FlowNotice)
 }

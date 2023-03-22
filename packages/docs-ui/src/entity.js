@@ -6,6 +6,7 @@ import NComment from './Comment/index.vue'
 import NRadioButton from './RadioButtonGroup/demo.vue'
 import NSteps from './Steps/index.vue'
 import MileStone from './Steps/demo/index.vue'
+import FlowNotice from './FlowNotice/demo.vue'
 
 // 导出单独组件
 export {
@@ -16,7 +17,8 @@ export {
   NComment,
   NRadioButton,
   NSteps,
-  MileStone
+  MileStone,
+  FlowNotice
 }
 
 // 引用
@@ -32,5 +34,7 @@ export default {
 
     app.component('NSteps', NSteps)
     app.component('MileStone', MileStone)
+
+    app.component('FlowNotice', FlowNotice)
   }
 }
