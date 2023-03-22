@@ -29,8 +29,8 @@
 </template>
 
 <script>
-const browserWidth = document.documentElement.clientWidth,
-  browserHeight = document.documentElement.clientHeight
+// const browserWidth = document.documentElement.clientWidth,
+//   browserHeight = document.documentElement.clientHeight
 
 export default {
   props: {
