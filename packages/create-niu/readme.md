@@ -4,7 +4,7 @@
 
 ## 开始
 
-安装依赖
+安装脚手架
 
 ```shell
 npm install @codeniu/create-niu -g
@@ -23,3 +23,7 @@ create-niu [project-name]
 
 cnu [project-name]
 ```
+
+## 文档
+
+[脚手架创建过程](https://juejin.cn/post/7175426757091131449)
