@@ -64,8 +64,11 @@ async function init() {
         name: 'template',
         message: reset('select a framework'),
         choices: [
-          { title: blue('template-demo'), value: 'demo' },
-          { title: cyan('project2'), value: 2 }
+          { title: blue('template-demo'), value: 'template-demo' },
+          {
+            title: cyan('express-ts-mongo-template'),
+            value: 'express-ts-mongo-template'
+          }
         ]
       }
     ])
@@ -90,8 +93,8 @@ async function init() {
   // 模板地址
   const templateDir = path.resolve(
     fileURLToPath(import.meta.url),
-    '../..',
-    `template-${template}`
+    '../../templates/',
+    template
   )
 
   // console.log('模板地址', templateDir)
