@@ -26,12 +26,10 @@ cnu [project-name]
 
 ## 开发
 
-```
+```shell
 cd .\packages\create-niu\
 
-npm link
-
-npm create niu
+node index.js
 
 ```
 
