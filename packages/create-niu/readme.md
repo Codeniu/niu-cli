@@ -24,6 +24,13 @@ create-niu [project-name]
 cnu [project-name]
 ```
 
+## 模板
+
+1. express-ts-mongo-template
+2. vue3-vite-ts-antdv-template
+
+![](https://codeniu-picbed.oss-cn-hangzhou.aliyuncs.com/picbed/202307141551187.jpg)
+
 ## 开发
 
 ```shell
