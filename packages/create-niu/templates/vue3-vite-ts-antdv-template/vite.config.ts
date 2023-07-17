@@ -8,7 +8,6 @@ import { loadEnv } from 'vite'
 import { resolve } from 'path'
 import { wrapperEnv } from './build/utils'
 import { generateModifyVars } from './build/generate/generateModifyVars'
-import { configStyleImportPlugin } from './build/vite/plugin/styleImport'
 import { GLOB_CONFIG_FILE_NAME } from './build/constant'
 import pkg from './package.json'
 
@@ -82,7 +81,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       target: 'es2015',
       cssTarget: 'chrome80',
       outDir: 'dist' + VITE_PUBLIC_PATH,
-      brotliSize: false,
+      reportCompressedSize: false,
       chunkSizeWarningLimit: 2000,
     },
     css: {
@@ -123,7 +122,6 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       }),
       vueJsx(),
       windiCSS(),
-      configStyleImportPlugin,
     ],
   }
 }

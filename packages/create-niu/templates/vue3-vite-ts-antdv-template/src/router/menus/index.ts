@@ -7,7 +7,7 @@ import { usePermissionStore } from '/@/store/modules/permission'
 import { filter } from '/@/utils/helper/treeHelper'
 import { isUrl } from '/@/utils/is'
 
-const modules = import.meta.globEager('../routes/modules/**/*.ts')
+const modules: Record<string, any> = import.meta.glob('../routes/modules/**/*.ts', { eager: true })
 
 const menuModules: any[] = []
 
@@ -22,8 +22,10 @@ Object.keys(modules).forEach((key) => {
 // ===========================
 
 const getPermissionMode = () => {
-  return PermissionModeEnum.ROUTE_MAPPING
+  const appStore = useAppStoreWithOut()
+  return appStore.getProjectConfig.permissionMode
 }
+
 const isBackMode = () => {
   return getPermissionMode() === PermissionModeEnum.BACK
 }

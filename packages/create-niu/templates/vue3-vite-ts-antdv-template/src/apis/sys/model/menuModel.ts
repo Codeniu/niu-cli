@@ -13,7 +13,4 @@ export interface RouteItem {
 /**
  * @description: Get menu return value
  */
-export type getMenuListResultModel = {
-  id: string
-  children?: RouteItem[]
-}
+export type getMenuListResultModel = RouteItem[]

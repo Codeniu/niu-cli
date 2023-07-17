@@ -34,7 +34,8 @@ export function createParamMenuGuard(router: Router) {
 
 // TODO 菜单资源由后台获取时更改为BACK模式
 const getPermissionMode = () => {
-  return PermissionModeEnum.ROUTE_MAPPING
+  const appStore = useAppStoreWithOut()
+  return appStore.getProjectConfig.permissionMode
 }
 
 const isBackMode = () => {

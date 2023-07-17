@@ -1,7 +1,14 @@
 import type { AppRouteModule, AppRouteRecordRaw } from '/@/router/types'
 import type { Router, RouteRecordNormalized } from 'vue-router'
 
-import { getParentLayout, LAYOUT, EXCEPTION_COMPONENT } from '/@/router/constant'
+import {
+  getParentLayout,
+  LAYOUT,
+  NORMAL_LAYOUT,
+  USER_LAYOUT,
+  PAGE_LAYOUT,
+  EXCEPTION_COMPONENT,
+} from '/@/router/constant'
 import { cloneDeep, omit } from 'lodash-es'
 import { warn } from '/@/utils/log'
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -13,6 +20,9 @@ const LayoutMap = new Map<string, () => Promise<typeof import('*.vue')>>()
 
 LayoutMap.set('LAYOUT', LAYOUT)
 // LayoutMap.set('IFRAME', IFRAME)
+LayoutMap.set('NORMAL_LAYOUT', NORMAL_LAYOUT)
+LayoutMap.set('USER_LAYOUT', USER_LAYOUT)
+LayoutMap.set('PAGE_LAYOUT', PAGE_LAYOUT)
 
 let dynamicViewsModules: Record<string, () => Promise<Recordable>>
 
@@ -72,7 +82,7 @@ export function transformObjToRoute<T = AppRouteModule>(routeList: AppRouteModul
   routeList.forEach((route) => {
     const component = route.component as string
     if (component) {
-      if (component.toUpperCase() === 'LAYOUT') {
+      if (LayoutMap.has(component.toUpperCase())) {
         route.component = LayoutMap.get(component.toUpperCase())
       } else {
         route.children = [cloneDeep(route)]

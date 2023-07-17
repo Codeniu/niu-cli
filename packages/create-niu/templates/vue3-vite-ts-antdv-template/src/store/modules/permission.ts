@@ -98,7 +98,8 @@ export const usePermissionStore = defineStore({
       const roleList = toRaw(userStore.getRoleList) || []
 
       // 权限模式
-      const permissionMode: string = PermissionModeEnum.ROUTE_MAPPING
+      const appStore = useAppStoreWithOut()
+      const permissionMode: string = appStore.getProjectConfig.permissionMode
 
       const routeFilter = (route: AppRouteRecordRaw) => {
         const { meta } = route
