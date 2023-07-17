@@ -7,7 +7,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { loadEnv } from 'vite'
 import { resolve } from 'path'
 import { wrapperEnv } from './build/utils'
-import { createProxy } from './build/vite/proxy'
 import { generateModifyVars } from './build/generate/generateModifyVars'
 import { configStyleImportPlugin } from './build/vite/plugin/styleImport'
 import { GLOB_CONFIG_FILE_NAME } from './build/constant'
@@ -25,11 +24,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
 
   // The boolean type read by loadEnv is a string. This function can be converted to boolean type
   const viteEnv = wrapperEnv(env)
-
-  const { VITE_PUBLIC_PATH, VITE_PORT, VITE_PROXY, VITE_GLOB_APP_TITLE, VITE_DROP_CONSOLE } =
-    viteEnv
+  const { VITE_PUBLIC_PATH, VITE_PORT, VITE_GLOB_APP_TITLE, VITE_DROP_CONSOLE } = viteEnv
 
   const path = VITE_PUBLIC_PATH.endsWith('/') ? VITE_PUBLIC_PATH : `${VITE_PUBLIC_PATH}/`
+
   const getAppConfigSrc = () => {
     return `${path || '/'}${GLOB_CONFIG_FILE_NAME}?v=${pkg.version}-${new Date().getTime()}`
   }
@@ -58,23 +56,23 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // Listening on all local IPs
       host: true,
       port: VITE_PORT || 3100,
-      proxy: createProxy(VITE_PROXY),
-      // proxy: {
-      //   '/basic-dev': {
-      //     target: 'http://localhost/basic-prod',
-      //     changeOrigin: true,
-      //     ws: true,
-      //     rewrite: (path) => path.replace(new RegExp(`^/basic-dev`), ''),
-      //     // only https
-      //     // secure: false
-      //   },
-      //   '/upload': {
-      //     target: 'http://localhost:3300/upload',
-      //     changeOrigin: true,
-      //     ws: true,
-      //     rewrite: (path) => path.replace(new RegExp(`^/upload`), ''),
-      //   },
-      // },
+      // proxy: createProxy(VITE_PROXY),
+      proxy: {
+        '/basic-dev': {
+          target: 'https://mock.apifox.cn/m1/3022580-0-default',
+          changeOrigin: true,
+          ws: true,
+          rewrite: (path) => path.replace(new RegExp(`^/basic-dev`), ''),
+          // only https
+          // secure: false
+        },
+        '/upload': {
+          target: 'http://localhost:3300/upload',
+          changeOrigin: true,
+          ws: true,
+          rewrite: (path) => path.replace(new RegExp(`^/upload`), ''),
+        },
+      },
     },
 
     esbuild: {
