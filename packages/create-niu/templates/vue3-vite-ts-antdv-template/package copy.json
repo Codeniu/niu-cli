@@ -1,0 +1,107 @@
+{
+  "name": "xxx-project-template",
+  "private": true,
+  "version": "0.0.4",
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "dev": "vite",
+    "build": "cross-env NODE_ENV=production vite build && esno ./build/script/postBuild.ts",
+    "build:staging": "cross-env NODE_ENV=production vite build --mode staging && esno ./build/script/postBuild.ts",
+    "preview": "vite preview",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "lint:lint-staged": "lint-staged",
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "prepare": "husky install",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "clean:lib": "rimraf node_modules",
+    "reinstall": "rimraf yarn.lock && rimraf package.lock.json && rimraf node_modules && npm run bootstrap"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@vueuse/core": "^10.2.1",
+    "ant-design-vue": "^3.2.20",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "echarts": "^5.4.2",
+    "jsencrypt": "^3.3.2",
+    "lodash-es": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.1.4",
+    "qs": "^6.11.2",
+    "resize-observer-polyfill": "^1.5.1",
+    "showdown": "^2.1.0",
+    "vditor": "^3.9.4",
+    "vue": "^3.3.4",
+    "vue-types": "^5.1.0",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/lodash-es": "^4.17.8",
+    "@types/node": "^20.4.2",
+    "@types/qs": "^6.9.7",
+    "@types/showdown": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/compiler-sfc": "^3.3.4",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-define-config": "^1.21.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "esno": "^0.17.0",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "less": "^4.1.3",
+    "lint-staged": "^13.2.3",
+    "postcss": "^8.4.26",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "stylelint": "^15.10.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.4",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-windicss": "^1.9.0",
+    "vue-tsc": "^1.8.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,less,styl,html}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}

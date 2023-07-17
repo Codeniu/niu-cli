@@ -1,0 +1,26 @@
+// =================================
+// ==========页面顶部搜索=============
+// =================================
+@default-padding: 4px 30px 24px;
+
+.p_options(@padding:@default-padding) {
+  padding: @padding;
+  background-color: #fff;
+
+  &-search {
+    text-align: center;
+  }
+}
+
+// =============================
+// ==========文本换行=============
+// =============================
+
+@default-line: 1;
+.text-wrap(@line:@default-line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+}

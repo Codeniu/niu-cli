@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0;
+      }
+
+      .cls-2 {
+        opacity: 0.65;
+      }
+    </style>
+  </defs>
+  <g id="stgx_icon_stxy_rws_nor" data-name="stgx_icon_stxy/rws_nor" transform="translate(-699 -280)">
+    <rect id="矩形_1832" data-name="矩形 1832" class="cls-1" width="16" height="16" transform="translate(699 280)"/>
+    <g id="组_2454" data-name="组 2454" class="cls-2" transform="translate(595.055 239.221)">
+      <path id="路径_2876" data-name="路径 2876" d="M114.446,42.667a2.778,2.778,0,0,1,2.778,2.778v6.668a2.778,2.778,0,0,1-2.778,2.778h-5a2.778,2.778,0,0,1-2.778-2.778V45.445a2.778,2.778,0,0,1,2.778-2.778Zm0,.972h-5a1.806,1.806,0,0,0-1.8,1.741v6.733a1.806,1.806,0,0,0,1.741,1.8h5.066a1.806,1.806,0,0,0,1.8-1.741V45.445a1.806,1.806,0,0,0-1.741-1.8Z"/>
+      <path id="路径_2877" data-name="路径 2877" d="M350.5,368a.486.486,0,0,1,.04.971l-.04,0h-3.334a.486.486,0,0,1-.04-.971l.04,0Zm-2.223,2.778a.486.486,0,0,1,.04.971l-.04,0h-1.111a.486.486,0,0,1-.04-.971l.04,0Z" transform="translate(-236.89 -321.096)"/>
+    </g>
+  </g>
+</svg>

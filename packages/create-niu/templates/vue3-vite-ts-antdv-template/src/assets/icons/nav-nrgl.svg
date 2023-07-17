@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.8;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <g id="nav_icon_nrgl_nor" class="cls-1" transform="translate(-621 -15)">
+    <rect id="矩形_40" data-name="矩形 40" class="cls-2" width="24" height="24" transform="translate(621 15)"/>
+    <g id="组_2015" data-name="组 2015" transform="translate(625 18)">
+      <path id="路径_2200" data-name="路径 2200" class="cls-3" d="M118.426,64a4.2,4.2,0,0,1,4.2,4.2v9.239a4.2,4.2,0,0,1-4.2,4.2h-7.559a4.2,4.2,0,0,1-4.2-4.2V68.2a4.2,4.2,0,0,1,4.2-4.2Zm0,1.47h-7.559a2.73,2.73,0,0,0-2.728,2.632l0,.1v9.239a2.73,2.73,0,0,0,2.632,2.728l.1,0h7.559a2.73,2.73,0,0,0,2.728-2.632l0-.1V68.2a2.73,2.73,0,0,0-2.632-2.728Z" transform="translate(-106.667 -64)"/>
+      <path id="路径_2201" data-name="路径 2201" class="cls-3" d="M482.923,86.1h1.344v3.917l.678-.363a.672.672,0,0,1,.571-.03l.06.028.707.374V86.1h1.344v5.04a.672.672,0,0,1-.935.618l-.05-.024-1.377-.727-1.352.724a.672.672,0,0,1-.987-.537l0-.055Z" transform="translate(-475.516 -85.666)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0;
+      }
+
+      .cls-2 {
+        opacity: 0.65;
+      }
+    </style>
+  </defs>
+  <g id="jfgl_icon_jfgzgl_nor" transform="translate(-927 -472)">
+    <rect id="矩形_56" data-name="矩形 56" class="cls-1" width="16" height="16" transform="translate(927 472)"/>
+    <g id="组_2487" data-name="组 2487" class="cls-2" transform="translate(929.951 476.305)">
+      <path id="路径_2881" data-name="路径 2881" d="M332.2,218.667a.484.484,0,0,1,.04.967l-.04,0h-6.367a.484.484,0,0,1-.04-.967l.04,0Zm0,3.322a.484.484,0,0,1,.04.967l-.04,0h-6.367a.484.484,0,0,1-.04-.967l.04,0Zm0,3.322a.484.484,0,0,1,.04.967l-.04,0h-6.367a.484.484,0,0,1-.04-.967l.04,0Z" transform="translate(-323.065 -218.459)"/>
+      <path id="路径_2882" data-name="路径 2882" d="M150.025,203.359m-.692,0a.692.692,0,1,0,.692-.692A.692.692,0,0,0,149.333,203.359Z" transform="translate(-149.333 -202.667)"/>
+      <path id="路径_2883" data-name="路径 2883" d="M150.025,459.359m-.692,0a.692.692,0,1,0,.692-.692A.692.692,0,0,0,149.333,459.359Z" transform="translate(-149.333 -455.345)"/>
+      <path id="路径_2884" data-name="路径 2884" d="M150.025,715.359m-.692,0a.692.692,0,1,0,.692-.692A.692.692,0,0,0,149.333,715.359Z" transform="translate(-149.333 -708.023)"/>
+    </g>
+  </g>
+</svg>

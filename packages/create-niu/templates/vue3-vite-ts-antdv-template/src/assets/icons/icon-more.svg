@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.28" height="20" viewBox="0 0 25.28 20">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0;
+      }
+      .cls-3 {
+        filter: url(#路径_5766);
+      }
+
+      .cls-4 {
+        filter: url(#路径_5765);
+      }
+
+      .cls-5 {
+        filter: url(#路径_5764);
+      }
+    </style>
+    <filter id="路径_5764" x="0" y="5.757" width="10.486" height="10.486" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="路径_5765" x="7.397" y="5.757" width="10.486" height="10.486" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="路径_5766" x="14.795" y="5.757" width="10.486" height="10.486" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon_more" transform="translate(-469.36 -335)">
+    <rect id="矩形_1844" data-name="矩形 1844" class="cls-1" width="20" height="20" transform="translate(472 335)"/>
+    <g id="组_5484" data-name="组 5484" transform="translate(418.479 -64.617)">
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, 50.88, 399.62)">
+        <path id="路径_5764-2" data-name="路径 5764" class="cls-2" d="M58.366,409.617a2.243,2.243,0,1,1-2.243-2.243A2.243,2.243,0,0,1,58.366,409.617Z" transform="translate(-50.88 -399.62)"/>
+      </g>
+      <g class="cls-4" transform="matrix(1, 0, 0, 1, 50.88, 399.62)">
+        <path id="路径_5765-2" data-name="路径 5765" class="cls-2" d="M410.474,409.617a2.243,2.243,0,1,1-2.243-2.243A2.243,2.243,0,0,1,410.474,409.617Z" transform="translate(-395.59 -399.62)"/>
+      </g>
+      <g class="cls-3" transform="matrix(1, 0, 0, 1, 50.88, 399.62)">
+        <path id="路径_5766-2" data-name="路径 5766" class="cls-2" d="M762.582,409.618a2.243,2.243,0,1,1-2.243-2.243A2.243,2.243,0,0,1,762.582,409.618Z" transform="translate(-740.3 -399.62)"/>
+      </g>
+    </g>
+  </g>
+</svg>

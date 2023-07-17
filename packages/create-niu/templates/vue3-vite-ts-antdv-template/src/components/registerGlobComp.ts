@@ -1,0 +1,96 @@
+import type { App } from 'vue'
+import Antd, {
+  Breadcrumb,
+  Input,
+  Layout,
+  Menu,
+  Avatar,
+  Button,
+  Card,
+  Upload,
+  Affix,
+  Anchor,
+  Checkbox,
+  Collapse,
+  ConfigProvider,
+  DatePicker,
+  Divider,
+  Dropdown,
+  Form,
+  List,
+  Pagination,
+  Popconfirm,
+  Popover,
+  Progress,
+  Radio,
+  Rate,
+  Select,
+  Skeleton,
+  Slider,
+  Spin,
+  Steps,
+  Switch,
+  Table,
+  Tabs,
+  Tag,
+  Timeline,
+  TimePicker,
+  Tooltip,
+  Transfer,
+  Tree,
+  TreeSelect,
+  InputNumber,
+  Modal,
+} from 'ant-design-vue'
+
+export function registerGlobComp(app: App) {
+  app.use(Input)
+  app.use(Layout)
+  app.use(Menu)
+  app.use(Avatar)
+  app.use(Breadcrumb)
+  app.use(Button)
+  app.use(Card)
+  app.use(Checkbox)
+  app.use(Collapse)
+  app.use(DatePicker)
+  app.use(Divider)
+  app.use(Dropdown)
+  app.use(Form)
+  app.use(Input)
+  app.use(InputNumber)
+  app.use(Layout)
+  app.use(List)
+  app.use(Menu)
+  app.use(Modal)
+  app.use(Pagination)
+  app.use(Popconfirm)
+  app.use(Popover)
+  app.use(Progress)
+  app.use(Radio)
+  app.use(Rate)
+  app.use(Select)
+  app.use(Slider)
+  app.use(Spin)
+  app.use(Steps)
+  app.use(Switch)
+  app.use(Table)
+  app.use(Tabs)
+  app.use(Tag)
+  app.use(TimePicker)
+  app.use(Timeline)
+  app.use(Tooltip)
+  app.use(Transfer)
+  app.use(Tree)
+  app.use(TreeSelect)
+  app.use(Upload)
+  app.use(Skeleton)
+  app.use(ConfigProvider)
+  app.use(Affix)
+  app.use(Anchor)
+}
+
+// 全局导入 antd 组件
+export function registerGlobAntd(app: App) {
+  app.use(Antd)
+}
