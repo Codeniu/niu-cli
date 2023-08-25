@@ -3,29 +3,20 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import minimist from 'minimist'
 import prompts from 'prompts'
-import {
-  blue,
-  cyan,
-  green,
-  lightGreen,
-  lightRed,
-  magenta,
-  red,
-  reset,
-  yellow
-} from 'kolorist'
+import { blue, bold, cyan, lightGreen, red, reset } from 'kolorist'
 
 const argv = minimist<{
   t?: string
   template?: string
 }>(process.argv.slice(2), { string: ['_'] })
+
 const cwd = process.cwd()
 
 const renameFiles: Record<string, string | undefined> = {
   _gitignore: '.gitignore'
 }
 
-const defaultTargetDir = 'vite-project'
+const defaultTargetDir = 'your-project-name'
 
 async function init() {
   const argTargetDir = formatTargetDir(argv._[0])
@@ -43,7 +34,7 @@ async function init() {
       {
         type: argTargetDir ? null : 'text',
         name: 'projectName',
-        message: reset('Project name:'),
+        message: reset('项目名称:'),
         initial: defaultTargetDir,
         onState: (state) => {
           targetDir = formatTargetDir(state.value) || defaultTargetDir
@@ -62,12 +53,16 @@ async function init() {
       {
         type: 'select', //模板选择
         name: 'template',
-        message: reset('select a framework'),
+        message: reset('选择项目模板:'),
         choices: [
           { title: blue('template-demo'), value: 'template-demo' },
           {
-            title: cyan('express-ts-mongo-template'),
+            title: blue('express-ts-mongo-template'),
             value: 'express-ts-mongo-template'
+          },
+          {
+            title: blue('vue3-vite-ts-antdv-template'),
+            value: 'vue3-vite-ts-antdv-template'
           }
         ]
       }
@@ -88,7 +83,8 @@ async function init() {
   }
 
   // 写入模板信息
-  console.log(`\n正在创建项目 ${root} ...`)
+  console.log(`\n\n🚀 正在创建项目: \n`)
+  console.log(cyan(` ${root} ...`))
 
   // 模板地址
   const templateDir = path.resolve(
@@ -140,7 +136,10 @@ async function init() {
 
   write('package.json', JSON.stringify(pkg, null, 2))
 
-  console.log(`\n创建完成. 现在运行:\n`)
+  console.log(`\n\n🆗 创建完成, 现在运行:\n`)
+  console.log(bold(lightGreen(`  cd ${pkg.name}`)))
+  console.log(bold(lightGreen(`  pnpm install`)))
+  console.log(bold(lightGreen(`  pnpm start\n`)))
 }
 
 function formatTargetDir(targetDir: string | undefined) {
@@ -165,5 +164,6 @@ function emptyDir(dir: string) {
 }
 
 init().catch((e) => {
-  console.error(e)
+  console.log(red(`\n\n 安装中止`))
+  console.error(red(e))
 })
