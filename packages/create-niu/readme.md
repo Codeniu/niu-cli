@@ -4,8 +4,8 @@
 
 项目模板：
 
-- Express 服务端模板 [express-ts-mongo](\templates\express-ts-mongo-template\README.md)
-- 中后台管理项目模板 [vue3-vite-ts-antdv](\templates\vue3-vite-ts-antdv-template\README.md)
+- Express 服务端模板 [express-ts-mongo](templates/express-ts-mongo-template/README.md)
+- 中后台管理项目模板 [vue3-vite-ts-antdv](templates/vue3-vite-ts-antdv-template/README.md)
 
 ## 快速开始
 
