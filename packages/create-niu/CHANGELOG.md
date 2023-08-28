@@ -1,5 +1,7 @@
 
 
+## [0.1.1](https://github.com/Codeniu/niu-cli/compare/0.1.0...0.1.1) (2023-08-28)
+
 # 0.1.0 (2023-08-28)
 
 
