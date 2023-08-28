@@ -9,7 +9,7 @@ const about: AppRouteModule = {
   redirect: '/about/index',
   meta: {
     hideChildrenInMenu: true,
-    icon: 'nav-yygl',
+    icon: 'communicate',
     title: '关于',
     orderNo: 100000,
     hideMenu: false,
@@ -21,7 +21,7 @@ const about: AppRouteModule = {
       component: () => import('/@/views/sys/about/index.vue'),
       meta: {
         title: '关于',
-        icon: 'nav-yygl',
+        icon: 'communicate',
         hideMenu: true,
       },
     },

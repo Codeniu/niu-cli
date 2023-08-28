@@ -6,6 +6,7 @@ import type { Menu } from '/@/router/types'
 import { usePermissionStore } from '/@/store/modules/permission'
 import { filter } from '/@/utils/helper/treeHelper'
 import { isUrl } from '/@/utils/is'
+import { useAppStoreWithOut } from '/@/store/modules/app'
 
 const modules: Record<string, any> = import.meta.glob('../routes/modules/**/*.ts', { eager: true })
 
@@ -73,6 +74,12 @@ export async function getCurrentParentPath(currentPath: string) {
   const menus = await getAsyncMenus()
   const allParentPath = await getAllParentPath(menus, currentPath)
   return allParentPath?.[0]
+}
+
+export async function getCurrentPathList(currentPath: string) {
+  const menus = await getAsyncMenus()
+  const allParentPath = await getAllParentPath(menus, currentPath)
+  return allParentPath
 }
 
 // Get the children of the menu

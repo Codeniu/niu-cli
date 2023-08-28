@@ -15,11 +15,6 @@ export const LAYOUT = () => import('/@/layouts/default/index.vue')
 export const PAGE_LAYOUT = () => import('/@/layouts/page/index.vue')
 
 /**
- * @description: user layout
- */
-export const USER_LAYOUT = () => import('/@/layouts/user/index.vue')
-
-/**
  * @description: normal layout
  */
 export const NORMAL_LAYOUT = () => import('/@/layouts/normal/index.vue')

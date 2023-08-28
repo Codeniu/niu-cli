@@ -10,9 +10,9 @@
 <script lang="ts" setup>
   import { PageEnum } from '/@/enums/pageEnum'
   import { useGo } from '/@/hooks/web/usePage'
-  import LOGO from '/@/assets/icons/logo.svg'
+  import LOGO from '/@/assets/images/logo.png'
 
-  const title = 'XX-PROJECT-TEMPLATE'
+  const title = 'VUE-ADMIN'
   const go = useGo()
   function goHome() {
     go(PageEnum.BASE_HOME)

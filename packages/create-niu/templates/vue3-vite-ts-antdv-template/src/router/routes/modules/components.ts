@@ -9,7 +9,7 @@ const components: AppRouteModule = {
   redirect: '/components/index',
   meta: {
     hideChildrenInMenu: false,
-    icon: 'nav-yygl',
+    icon: 'code-apply',
     title: '组件',
     orderNo: 100000,
     hideMenu: false,
@@ -21,7 +21,7 @@ const components: AppRouteModule = {
       component: () => import('/@/views/sys/components-demo/index.vue'),
       meta: {
         title: 'teleport 示例',
-        icon: 'nav-yygl',
+        icon: '',
         hideMenu: false,
       },
     },
@@ -31,7 +31,7 @@ const components: AppRouteModule = {
       component: () => import('/@/views/sys/components-demo/ContextMenu.vue'),
       meta: {
         title: '右键菜单',
-        icon: 'nav-yygl',
+        icon: '',
         hideMenu: false,
       },
     },
@@ -41,9 +41,51 @@ const components: AppRouteModule = {
       component: () => import('/@/views/sys/components-demo/MessageBox.vue'),
       meta: {
         title: '消息弹窗',
-        icon: 'nav-yygl',
+        icon: '',
         hideMenu: false,
       },
+    },
+    {
+      path: 'menus',
+      name: 'Menus',
+      redirect: '/menus/menu-1',
+      meta: {
+        title: '级联菜单',
+        icon: '',
+        hideMenu: false,
+      },
+      children: [
+        {
+          path: 'menu-1',
+          name: 'Menu1',
+          component: () => import('/@/views/sys/components-demo/menus.vue'),
+          meta: {
+            title: '菜单一',
+            icon: '',
+            hideMenu: false,
+          },
+        },
+        {
+          path: 'menu-2',
+          name: 'Menu2',
+          component: () => import('/@/views/sys/components-demo/menus.vue'),
+          meta: {
+            title: '菜单二',
+            icon: '',
+            hideMenu: false,
+          },
+        },
+        {
+          path: 'menu-3',
+          name: 'Menu3',
+          component: () => import('/@/views/sys/components-demo/menus.vue'),
+          meta: {
+            title: '菜单三',
+            icon: '',
+            hideMenu: false,
+          },
+        },
+      ],
     },
   ],
 }

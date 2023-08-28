@@ -9,7 +9,7 @@ const dashboard: AppRouteModule = {
   redirect: '/dashboard/workbench',
   meta: {
     orderNo: 1,
-    icon: 'nav-yygl',
+    icon: 'nav-home',
     title: '首页',
     hideMenu: false,
   },

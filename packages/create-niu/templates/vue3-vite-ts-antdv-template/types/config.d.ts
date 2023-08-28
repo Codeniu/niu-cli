@@ -22,3 +22,6 @@ export interface GlobEnvConfig {
   // Upload url
   VITE_GLOB_UPLOAD_URL?: string
 }
+export interface ProjectConfig {
+  permissionMode?: string
+}

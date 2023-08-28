@@ -6,11 +6,17 @@ import { objectToFormData } from '/@/utils/http/axios/helper'
 
 enum Api {
   GET_TOKEN = '/spUser/getBearToken',
+
   Login = '/innovation/login/userLogin',
+
   Logout = '/innovation/login/userLogout',
+
   GetUserInfo = '/spUser/queryCurrentUser',
+
   GetPermCode = '/getPermCode',
+
   WechatLogin = '/weChat/getUserId', // 微信扫码登录 开发及测试环境
+
   prodWechatLogin = '/ZYweChat/getUserId', // 微信扫码登录 生产环境
 }
 
@@ -73,6 +79,23 @@ export function wechatLogin(params: wechatLoginParam, mode: ErrorMessageMode = '
     { url: MODE === 'production' ? Api.prodWechatLogin : Api.WechatLogin, params },
     {
       errorMessageMode: mode,
+    },
+  )
+}
+
+/**
+ * @description: 修改密码
+ */
+export function editPassword(data: any, mode: ErrorMessageMode = 'modal') {
+  return defHttp.post(
+    {
+      url: Api.Login,
+      data,
+    },
+    {
+      errorMessageMode: mode,
+      joinPrefix: false,
+      isTransformResponse: true,
     },
   )
 }

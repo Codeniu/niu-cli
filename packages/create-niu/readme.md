@@ -1,21 +1,29 @@
 # create-niu
 
-一个脚手架,用于快速创建项目
+一个脚手架,用于快速创建项目。
 
-## 开始
+项目模板：
 
-安装脚手架
+- Express 服务端模板 [express-ts-mongo](\templates\express-ts-mongo-template\README.md)
+- 中后台管理项目模板 [vue3-vite-ts-antdv](\templates\vue3-vite-ts-antdv-template\README.md)
+
+## 快速开始
+
+使用 `npx` 以确保使用最新版本：
+
+```shell
+npx @codeniu/create-niu <my-app>
+cd my-app
+npm install
+```
+
+***or***
+
+全局安装
 
 ```shell
 npm install @codeniu/create-niu -g
-```
 
-执行
-
-```shell
-npm create niu [project-name]
-
-// or
 
 create-niu [project-name]
 

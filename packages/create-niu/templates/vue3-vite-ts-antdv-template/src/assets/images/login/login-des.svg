@@ -1,1 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="223" viewBox="0 0 512 223"><g id="组_6645" data-name="组 6645" transform="translate(-119 -346)"><text id="创新工作室联盟" fill="#fff" font-family="SourceHanSansCN-Medium, Source Han Sans CN" font-size="70" font-weight="500" transform="translate(119 408)"><tspan x="0" y="0">WELCOME</tspan></text><text id="INNOVATION_STUDIO_ALLIANCE" fill="#fff" data-name="INNOVATION STUDIO ALLIANCE" font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" letter-spacing=".1em" transform="translate(119 474)"><tspan x="0" y="0">XX-PROJECT-TEMPLATE</tspan></text><g id="组_6251" data-name="组 6251"><text id="合作" fill="#fff" font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" transform="translate(146 550)"><tspan x="0" y="0">合作</tspan></text><g id="矩形_2412" fill="none" stroke="#fff" stroke-width="1" data-name="矩形 2412" transform="translate(119 509)"><rect width="114" height="60" stroke="none" rx="30"/><rect width="113" height="59" x=".5" y=".5" fill="none" rx="29.5"/></g></g><g id="组_6249" data-name="组 6249" transform="translate(-3)"><text id="共享" fill="#fff" font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" transform="translate(283 550)"><tspan x="0" y="0">共享</tspan></text><g id="矩形_2413" fill="none" stroke="#fff" stroke-width="1" data-name="矩形 2413" transform="translate(256 509)"><rect width="114" height="60" stroke="none" rx="30"/><rect width="113" height="59" x=".5" y=".5" fill="none" rx="29.5"/></g></g><g id="组_6250" data-name="组 6250" transform="translate(-4)"><text id="传承" fill="#fff" font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" transform="translate(418 550)"><tspan x="0" y="0">传承</tspan></text><g id="矩形_2414" fill="none" stroke="#fff" stroke-width="1" data-name="矩形 2414" transform="translate(391 509)"><rect width="114" height="60" stroke="none" rx="30"/><rect width="113" height="59" x=".5" y=".5" fill="none" rx="29.5"/></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="223" viewBox="0 0 512 223">
+  <g id="组_6645" data-name="组 6645" transform="translate(-119 -346)"><text id="创新工作室联盟" fill="#fff"
+      font-family="SourceHanSansCN-Medium, Source Han Sans CN" font-size="70" font-weight="500"
+      transform="translate(119 408)">
+      <tspan x="0" y="0">WELCOME</tspan>
+    </text><text id="INNOVATION_STUDIO_ALLIANCE" fill="#fff" data-name="INNOVATION STUDIO ALLIANCE"
+      font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" letter-spacing=".1em"
+      transform="translate(119 474)">
+      <tspan x="0" y="0">VUE-ADMIN</tspan>
+    </text>
+    <g id="组_6251" data-name="组 6251"><text id="合作" fill="#fff"
+        font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" transform="translate(146 550)">
+        <tspan x="0" y="0">合作</tspan>
+      </text>
+      <g id="矩形_2412" fill="none" stroke="#fff" stroke-width="1" data-name="矩形 2412" transform="translate(119 509)">
+        <rect width="114" height="60" stroke="none" rx="30" />
+        <rect width="113" height="59" x=".5" y=".5" fill="none" rx="29.5" />
+      </g>
+    </g>
+    <g id="组_6249" data-name="组 6249" transform="translate(-3)"><text id="共享" fill="#fff"
+        font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" transform="translate(283 550)">
+        <tspan x="0" y="0">共享</tspan>
+      </text>
+      <g id="矩形_2413" fill="none" stroke="#fff" stroke-width="1" data-name="矩形 2413" transform="translate(256 509)">
+        <rect width="114" height="60" stroke="none" rx="30" />
+        <rect width="113" height="59" x=".5" y=".5" fill="none" rx="29.5" />
+      </g>
+    </g>
+    <g id="组_6250" data-name="组 6250" transform="translate(-4)"><text id="传承" fill="#fff"
+        font-family="SourceHanSansCN-Regular, Source Han Sans CN" font-size="30" transform="translate(418 550)">
+        <tspan x="0" y="0">传承</tspan>
+      </text>
+      <g id="矩形_2414" fill="none" stroke="#fff" stroke-width="1" data-name="矩形 2414" transform="translate(391 509)">
+        <rect width="114" height="60" stroke="none" rx="30" />
+        <rect width="113" height="59" x=".5" y=".5" fill="none" rx="29.5" />
+      </g>
+    </g>
+  </g>
+</svg>

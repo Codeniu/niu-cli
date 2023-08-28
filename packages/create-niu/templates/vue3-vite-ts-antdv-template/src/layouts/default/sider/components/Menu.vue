@@ -34,7 +34,7 @@
   import { defineComponent, computed, ref, watchEffect } from 'vue'
   import { useRouter } from 'vue-router'
   import { useGo } from '/@/hooks/web/usePage'
-  import { getCurrentParentPath, getChildrenMenus } from '/@/router/menus'
+  import { getCurrentParentPath, getChildrenMenus, getCurrentPathList } from '/@/router/menus'
   import MenuTitle from './MenuTitle.vue'
 
   export default defineComponent({
@@ -65,6 +65,7 @@
       watchEffect(async () => {
         let path = currentRoute.value.path
         const parentPath = await getCurrentParentPath(path)
+        const pathList = await getCurrentPathList(path)
         const list = await getChildrenMenus(parentPath)
         menus.value = list
           .filter((item) => !item.meta?.hideMenu)
@@ -76,10 +77,12 @@
             }
           })
         selectedKeys.value = [path]
+        openKeys.value = pathList
       })
 
       const handleMenuClick = ({ key, keyPath }: any) => {
-        openKeys.value = keyPath
+        console.log('keyPath: ', keyPath)
+        // openKeys.value = keyPath
         go(key)
       }
 

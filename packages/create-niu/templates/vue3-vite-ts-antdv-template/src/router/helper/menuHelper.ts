@@ -35,6 +35,25 @@ export function transformMenuModule(menuModule: any[]): Menu {
   return menuList[0]
 }
 
+export function initRouteRedirect(routeModList: AppRouteModule[]) {
+  const cloneRouteModList = cloneDeep(routeModList)
+
+  joinParentPath(cloneRouteModList)
+
+  const list = treeMap(cloneRouteModList, {
+    conversion: (node: AppRouteRecordRaw) => {
+      const { redirect } = node
+      if (!redirect) {
+        if (node.children && node.children.length > 0) {
+          node['redirect'] = node?.children?.[0]?.path
+        }
+      }
+      return node
+    },
+  })
+  return cloneDeep(list)
+}
+
 export function transformRouteToMenu(routeModList: AppRouteModule[], routerMapping = false) {
   const cloneRouteModList = cloneDeep(routeModList)
   const routeList: AppRouteRecordRaw[] = []

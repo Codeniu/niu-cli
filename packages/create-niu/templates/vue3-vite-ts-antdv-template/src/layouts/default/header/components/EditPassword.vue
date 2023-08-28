@@ -23,8 +23,8 @@
 <script lang="ts" setup>
   import { reactive, ref } from 'vue'
   import { useMessage } from '/@/hooks/web/useMessage'
-  import { editPassword } from '/@/apis/user/user'
   import { doEncrypt } from '/@/utils/encrypt'
+  import { editPassword } from '/@/apis/sys/login'
 
   const { createMessage } = useMessage()
 

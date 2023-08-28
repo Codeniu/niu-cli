@@ -2,7 +2,7 @@
 
 中后台项目模板
 
-noed:14.16.1
+noed > 16.18.0
 
 技术栈：
 
@@ -12,7 +12,7 @@ noed:14.16.1
 
 ui 库 :
 
-- [antdv 2.x](https://2x.antdv.com/components/overview-cn/)
+- [antdv 3.x](https://3x.antdv.com/components/overview-cn/)
 - [windcss](https://windicss.org/)
 
 ## 菜单样式
@@ -23,19 +23,9 @@ ui 库 :
 
 生产环境打包时注意：
 
-1. views/login/QrCodeLogin.vue 扫码登陆配置需要注意，（已做动态配置）
+1. views/login/QrCodeLogin.vue 扫码登陆配置需要注意
 
-2. 生产环境下 vditor CDN 地址： <http://127.0.0.1/static/vditor/>
-
-   位置：src\components\Markdown\src\Markdown.vue
-
-3. 静态文件地址 \src\apis\sys\file.ts
-
-- 生产 pnpm run build
-
-- 阿里云 pnpm run build:staging
-
-部署路径：****
+2. vditor CDN 地址： <http://127.0.0.1/static/vditor/>位置：src\components\Markdown\src\Markdown.vue
 
 ## 目录描述
 

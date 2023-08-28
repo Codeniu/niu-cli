@@ -1,5 +1,5 @@
 {
-  "name": "xxx-project-template",
+  "name": "my-app",
   "private": true,
   "version": "0.0.5",
   "scripts": {
@@ -32,7 +32,7 @@
     "showdown": "^2.0.3",
     "vditor": "^3.8.13",
     "vue": "^3.2.25",
-    "vue-router": "4"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",

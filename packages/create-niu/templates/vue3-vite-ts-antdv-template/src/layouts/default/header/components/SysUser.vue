@@ -186,7 +186,7 @@
   })
   // 跳转到设置页
   const handelSettingClick = () => {
-    go('/setting/rolePermission')
+    go('/setting')
   }
   // login out
   function handleLoginOut() {
@@ -211,15 +211,15 @@
   }
   // 获取代办列表
   async function getListData() {
-    loading.value = true
-    const funcType = activeKey.value === '1' ? getTask : getHistoryTask
-    const { list, total } = await funcType({
-      pageNum: pagination.current,
-      pageSize: pagination.pageSize,
-    })
-    loading.value = false
-    listData.value = list || []
-    pagination.total = total
+    // loading.value = true
+    // const funcType = activeKey.value === '1' ? getTask : getHistoryTask
+    // const { list, total } = await funcType({
+    //   pageNum: pagination.current,
+    //   pageSize: pagination.pageSize,
+    // })
+    // loading.value = false
+    // listData.value = list || []
+    // pagination.total = total
   }
   const count = computed(() => {
     return activeKey.value === '1' ? listData.value.length : 0

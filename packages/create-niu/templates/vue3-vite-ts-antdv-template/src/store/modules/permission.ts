@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import type { AppRouteRecordRaw, Menu } from '/@/router/types'
 
 import { defineStore } from 'pinia'
@@ -5,12 +6,12 @@ import { store } from '/@/store'
 import { useUserStore } from './user'
 import { toRaw } from 'vue'
 import { flatMultiLevelRoutes, transformObjToRoute } from '/@/router/helper/routeHelper'
-import { transformRouteToMenu } from '/@/router/helper/menuHelper'
+import { initRouteRedirect, transformRouteToMenu } from '/@/router/helper/menuHelper'
 
 import { asyncRoutes } from '/@/router/routes'
 import { PAGE_NOT_FOUND_ROUTE } from '/@/router/routes/basic'
 
-import { filter } from '/@/utils/helper/treeHelper'
+import { filter, treeMap } from '/@/utils/helper/treeHelper'
 
 import { getMenuList } from '/@/apis/sys/menu'
 import { getPermCode } from '/@/apis/sys/login'
@@ -18,6 +19,7 @@ import { getPermCode } from '/@/apis/sys/login'
 import { useMessage } from '/@/hooks/web/useMessage'
 import { PageEnum } from '/@/enums/pageEnum'
 import { PermissionModeEnum } from '/@/enums/appEnum'
+import { useAppStoreWithOut } from './app'
 
 interface PermissionState {
   // 权限代码列表
@@ -177,15 +179,26 @@ export const usePermissionStore = defineStore({
             content: '菜单加载中...',
             duration: 1,
           })
-
           let routeList: AppRouteRecordRaw[] = []
           try {
             // this.changePermissionCode()
             const res = await getMenuList()
-            const list = (res?.children as AppRouteRecordRaw[]) || []
-            console.log('routeList', list)
-            // 格式化请求到的资源信息
-            // routeList = formatRouteList(res)
+            routeList = (res as AppRouteRecordRaw[]) || []
+
+            routeList = treeMap(routeList, {
+              conversion: (node: any) => {
+                const { title, icon, orderNo, hideMenu = false } = node
+                return {
+                  ...node,
+                  meta: {
+                    orderNo: orderNo,
+                    icon: icon,
+                    title: title,
+                    hideMenu: Boolean(hideMenu),
+                  },
+                }
+              },
+            })
           } catch (error) {
             console.error(error)
           }
@@ -195,6 +208,14 @@ export const usePermissionStore = defineStore({
 
           // 后台路由转为菜单结构
           const backMenuList = transformRouteToMenu(routeList)
+
+          // 动态设置 redirect 地址为 children[0].path
+          routeList = initRouteRedirect(routeList)
+          // console.log('routeList: ', routeList)
+
+          backMenuList.sort((a: any, b: any) => {
+            return (a.meta?.orderNo || 0) - (b.meta?.orderNo || 0)
+          })
           this.setBackMenuList(backMenuList)
 
           // remove meta.ignoreRoute item

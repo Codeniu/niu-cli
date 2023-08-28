@@ -58,7 +58,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // proxy: createProxy(VITE_PROXY),
       proxy: {
         '/basic-dev': {
-          target: 'https://mock.apifox.cn/m1/3022580-0-default',
+          target: 'https://mock.apifox.cn/m1/3204971-0-default',
           changeOrigin: true,
           ws: true,
           rewrite: (path) => path.replace(new RegExp(`^/basic-dev`), ''),

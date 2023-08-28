@@ -4,6 +4,7 @@ import { Menu } from '../types'
 import { PermissionModeEnum } from '/@/enums/appEnum'
 
 import { usePermissionStoreWithOut } from '/@/store/modules/permission'
+import { useAppStoreWithOut } from '/@/store/modules/app'
 
 export function createParamMenuGuard(router: Router) {
   const permissionStore = usePermissionStoreWithOut()

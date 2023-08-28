@@ -29,9 +29,9 @@
 <script lang="ts" setup>
   import { reactive, ref } from 'vue'
   import { useMessage } from '/@/hooks/web/useMessage'
-  import { editPassword } from '/@/apis/user/user'
   import { doEncrypt } from '/@/utils/encrypt'
   import { router } from '/@/router'
+  import { editPassword } from '/@/apis/sys/login'
 
   const { createMessage } = useMessage()
 
@@ -68,7 +68,7 @@
 
   // form
   const formRef = ref()
-  const formState = reactive({
+  const formState = reactive<any>({
     pwd: '',
     rePwd: '',
     oldPwd: '',

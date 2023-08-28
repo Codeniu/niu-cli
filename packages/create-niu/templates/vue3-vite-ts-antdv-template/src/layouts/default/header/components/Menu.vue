@@ -91,7 +91,7 @@
     }
 
     :deep(.ant-menu-item-selected) {
-      background-color: #56c9d2;
+      background-color: #4daedb;
 
       &::after {
         border: none;

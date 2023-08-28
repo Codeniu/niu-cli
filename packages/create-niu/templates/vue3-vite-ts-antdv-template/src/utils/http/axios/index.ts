@@ -44,7 +44,7 @@ const transform: AxiosTransform = {
       throw new Error('请求出错，请稍后再试')
     }
     //  这里 code，message为 后台统一的字段，需要在 types.ts内修改为项目自己的接口返回格式
-    const { code, message } = data
+    const { code, msg } = data
 
     // 返回内部的data值
     const hasSuccess = data && Reflect.has(data, 'code') && Number(code) === ResultEnum.SUCCESS
@@ -55,22 +55,21 @@ const transform: AxiosTransform = {
     // 在此处根据自己项目的实际情况对不同的code执行不同的操作
     // 如果不希望中断当前请求，请return数据，否则直接抛出异常即可
     let timeoutMsg = ''
+    const userStore = useUserStoreWithOut()
     switch (Number(code)) {
       case ResultEnum.TIMEOUT:
         timeoutMsg = '请求超时，请重新登录'
-        const userStore = useUserStoreWithOut()
-        userStore.setToken(undefined)
+        userStore.setToken(null)
         userStore.logout(true)
         break
       case 500:
-        timeoutMsg = message
+        timeoutMsg = msg
         break
       default:
-        if (message) {
-          timeoutMsg = message
+        if (msg) {
+          timeoutMsg = msg
         }
     }
-
     // errorMessageMode=‘modal’的时候会显示modal错误弹窗，而不是消息提示，用于一些比较重要的错误
     // errorMessageMode='none' 一般是调用时明确表示不希望自动弹出错误提示
     if (options.errorMessageMode === 'modal') {
@@ -151,6 +150,8 @@ const transform: AxiosTransform = {
       // STO
       ;(config as Recordable).headers.STO = token
     }
+    // clientType
+    ;(config as Recordable).headers.clientType = 'pj/web'
     return config
   },
 
@@ -202,8 +203,8 @@ function createAxios(opt?: Partial<CreateAxiosOptions>) {
       {
         // See https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes
         // authentication schemes，e.g: Bearer
-        // authenticationScheme: 'Bearer',
-        authenticationScheme: 'STO',
+        authenticationScheme: 'Bearer',
+        // authenticationScheme: 'STO',
         timeout: 10 * 1000,
         // 基础接口地址
         // baseURL: globSetting.apiUrl,
@@ -219,8 +220,8 @@ function createAxios(opt?: Partial<CreateAxiosOptions>) {
           joinPrefix: true,
           // 是否返回原生响应头 比如：需要获取响应头时使用该属性
           isReturnNativeResponse: false,
-          // 默认返回{code,data,mesage},如果需要只返回{data},加上该配置
-          isTransformResponse: false,
+          // 默认返回{code,data,mesage}中的data,如果需要全部返回,加上该配置
+          isTransformResponse: true,
           // post请求的时候添加参数到url
           joinParamsToUrl: false,
           // 格式化提交参数时间

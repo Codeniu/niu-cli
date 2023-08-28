@@ -5,7 +5,6 @@ import {
   getParentLayout,
   LAYOUT,
   NORMAL_LAYOUT,
-  USER_LAYOUT,
   PAGE_LAYOUT,
   EXCEPTION_COMPONENT,
 } from '/@/router/constant'
@@ -21,7 +20,6 @@ const LayoutMap = new Map<string, () => Promise<typeof import('*.vue')>>()
 LayoutMap.set('LAYOUT', LAYOUT)
 // LayoutMap.set('IFRAME', IFRAME)
 LayoutMap.set('NORMAL_LAYOUT', NORMAL_LAYOUT)
-LayoutMap.set('USER_LAYOUT', USER_LAYOUT)
 LayoutMap.set('PAGE_LAYOUT', PAGE_LAYOUT)
 
 let dynamicViewsModules: Record<string, () => Promise<Recordable>>
