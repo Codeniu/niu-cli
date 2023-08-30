@@ -49,8 +49,10 @@
 
       <a-form-item label="图标" name="icon">
         <div class="flex justify-between">
-          <a-input v-model:value="formState.icon" placeholder="请输入图标" />
-          <SvgIcon :name="formState.icon" :size="36" />
+          <!-- <a-input v-model:value="formState.icon" placeholder="请输入图标" />
+          <SvgIcon :name="formState.icon" :size="36" /> -->
+
+          <IconPicker v-model:value="formState.icon" />
         </div>
       </a-form-item>
 
@@ -71,8 +73,8 @@
 
 <script lang="ts" setup>
   import { reactive, ref, toRaw, watch } from 'vue'
-  import SvgIcon from '/@/components/SvgIcon.vue'
   import { add, update } from '/@/apis/setting/menu'
+  import { IconPicker } from '/@/components/Icon'
 
   const props = defineProps({
     isEdit: Boolean,
