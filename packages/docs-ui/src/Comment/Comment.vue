@@ -5,7 +5,7 @@
         <img v-if="info.avatar" :src="info.avatar" alt="头像" />
         <img
           v-else
-          src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb4026c3cb354ea498a8ada02cf3115f~tplv-k3u1fbpfcp-no-mark:460:460:460:270.awebp?"
+          src="https://avatars.githubusercontent.com/u/28432016?v=4"
           alt="头像"
         />
       </div>

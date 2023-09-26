@@ -14,8 +14,10 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-after': () => h(comment),
-      'doc-footer-before': () => h(copyright)
+      // 评论
+      'doc-after': () => h(comment)
+      // 版权声明
+      // 'doc-footer-before': () => h(copyright)
     })
   },
   enhanceApp(ctx) {

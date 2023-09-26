@@ -7,6 +7,7 @@ import NRadioButton from './RadioButtonGroup/demo.vue'
 import NSteps from './Steps/index.vue'
 import MileStone from './Steps/demo/index.vue'
 import FlowNotice from './FlowNotice/demo.vue'
+import EmojiSelectDemo from './EmojiSelect/demo.vue'
 
 // 导出单独组件
 export {
@@ -18,7 +19,8 @@ export {
   NRadioButton,
   NSteps,
   MileStone,
-  FlowNotice
+  FlowNotice,
+  EmojiSelectDemo
 }
 
 // 引用
@@ -36,5 +38,7 @@ export default {
     app.component('MileStone', MileStone)
 
     app.component('FlowNotice', FlowNotice)
+
+    app.component('EmojiSelectDemo', EmojiSelectDemo)
   }
 }
