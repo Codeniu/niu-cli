@@ -8,6 +8,7 @@ import NSteps from '../../../src/Steps/index.vue'
 import MileStone from '../../../src/Steps/demo/index.vue'
 import FlowNotice from '../../../src/FlowNotice/demo.vue'
 import EmojiSelect from '../../../src/EmojiSelect/index.vue'
+import LineClamp from '../../../src/LineClamp/index.vue'
 
 import Wrap from './Wrap.vue'
 
@@ -27,4 +28,6 @@ export function useComponents(app) {
   app.component('FlowNotice', FlowNotice)
 
   app.component('EmojiSelect', EmojiSelect)
+
+  app.component('LineClamp', LineClamp)
 }

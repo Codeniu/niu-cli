@@ -19,23 +19,19 @@ import { ref } from 'vue'
 const list = ref<any>([
   {
     id: 1,
-    coverImage:
-      'https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb4026c3cb354ea498a8ada02cf3115f~tplv-k3u1fbpfcp-no-mark:460:460:460:270.awebp?'
+    coverImage: 'https://avatars.githubusercontent.com/u/28432016?v=4'
   },
   {
     id: 2,
-    coverImage:
-      'https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb4026c3cb354ea498a8ada02cf3115f~tplv-k3u1fbpfcp-no-mark:460:460:460:270.awebp?'
+    coverImage: 'https://avatars.githubusercontent.com/u/28432016?v=4'
   },
   {
     id: 3,
-    coverImage:
-      'https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb4026c3cb354ea498a8ada02cf3115f~tplv-k3u1fbpfcp-no-mark:460:460:460:270.awebp?'
+    coverImage: 'https://avatars.githubusercontent.com/u/28432016?v=4'
   },
   {
     id: 4,
-    coverImage:
-      'https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb4026c3cb354ea498a8ada02cf3115f~tplv-k3u1fbpfcp-no-mark:460:460:460:270.awebp?'
+    coverImage: 'https://avatars.githubusercontent.com/u/28432016?v=4'
   }
 ])
 </script>

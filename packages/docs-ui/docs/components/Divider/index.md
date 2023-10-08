@@ -1,6 +1,15 @@
-# Divider [![NPM](https://img.shields.io/npm/l/@codeniu/vue-divider)](https://www.npmjs.com/package/@codeniu/vue-divider) [![npm](https://img.shields.io/npm/v/@codeniu/vue-divider.svg)](https://www.npmjs.com/package/@codeniu/vue-divider) [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+# Divider
+
+[![NPM](https://img.shields.io/npm/l/@codeniu/vue-divider)](https://www.npmjs.com/package/@codeniu/vue-divider)
+
+[![npm](https://img.shields.io/npm/v/@codeniu/vue-divider.svg)](https://www.npmjs.com/package/@codeniu/vue-divider)
+
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 > vue-divider is a dependency-free, lightweight vue component. This is a study project, You will learn how to build a npm package from this project. You can also learn some webpack configurations.
+>
+>
+> vue-divider 是一个无依赖、轻量级的 vue 组件。这是一个学习项目，您将学习如何从该项目构建 npm 包以及一些webpack配置。
 
 分割线组件
 
