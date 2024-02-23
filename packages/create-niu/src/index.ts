@@ -57,12 +57,12 @@ async function init() {
         choices: [
           { title: blue('template-demo'), value: 'template-demo' },
           {
-            title: blue('express-ts-mongo-template'),
-            value: 'express-ts-mongo-template'
+            title: blue('template-express-mongo-ts'),
+            value: 'template-express-mongo-ts'
           },
           {
-            title: blue('vue3-vite-ts-antdv-template'),
-            value: 'vue3-vite-ts-antdv-template'
+            title: blue('template-vben1'),
+            value: 'template-vben1'
           }
         ]
       }
@@ -89,7 +89,7 @@ async function init() {
   // 模板地址
   const templateDir = path.resolve(
     fileURLToPath(import.meta.url),
-    '../../templates/',
+    '../../',
     template
   )
 
