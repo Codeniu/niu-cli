@@ -1,17 +1,17 @@
 import type { AppRouteModule } from '/@/router/types'
 
-import { LAYOUT } from '/@/router/constant'
+import { NORMAL_LAYOUT } from '/@/router/constant'
 
 const about: AppRouteModule = {
   path: '/about',
   name: 'About',
-  component: LAYOUT,
+  component: NORMAL_LAYOUT,
   redirect: '/about/index',
   meta: {
     hideChildrenInMenu: true,
     icon: 'communicate',
     title: '关于',
-    orderNo: 100000,
+    orderNo: 5,
     hideMenu: false,
   },
   children: [

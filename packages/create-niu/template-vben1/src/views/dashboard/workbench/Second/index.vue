@@ -1,7 +1,7 @@
 <template>
   <div class="second-container">
-    <Card title="供应商信息变更预警" :list="list1" :count="list1.length" />
-    <Card title="供应商风险" :list="list2" :count="list2.length" />
+    <Card title="变更预警" :list="list1" :count="list1.length" />
+    <Card title="风险" :list="list2" :count="list2.length" />
   </div>
 </template>
 
@@ -12,7 +12,7 @@
     {
       id: 1,
       type: '法人变更',
-      company: '河南郑州奥瑞物业管理有限责任公司',
+      company: 'XX物业管理有限责任公司',
     },
 
     {
@@ -24,19 +24,19 @@
     {
       id: 3,
       type: '监事变更',
-      company: '河南康业管理咨询有限公司',
+      company: 'XX管理咨询有限公司',
     },
 
     {
       id: 4,
       type: '司法风险',
-      company: '河南康业管理咨询有限公司',
+      company: 'XX管理咨询有限公司',
     },
 
     {
       id: 5,
       type: '司法风险',
-      company: '河南康业管理咨询有限公司',
+      company: 'XX管理咨询有限公司',
     },
   ]
 
@@ -44,7 +44,7 @@
     {
       id: 1,
       type: '法人变更',
-      company: '河南郑州奥瑞物业管理有限责任公司',
+      company: 'XX物业管理有限责任公司',
     },
     {
       id: 2,
@@ -55,12 +55,12 @@
     {
       id: 3,
       type: '监事变更',
-      company: '河南康业管理咨询有限公司',
+      company: 'XX管理咨询有限公司',
     },
     {
       id: 6,
       type: '司法风险',
-      company: '河南康业管理咨询有限公司',
+      company: 'XX管理咨询有限公司',
     },
   ]
 </script>

@@ -15,17 +15,52 @@ ui 库 :
 - [antdv 3.x](https://3x.antdv.com/components/overview-cn/)
 - [windcss](https://windicss.org/)
 
-## 菜单样式
+## 预览
 
 ![](https://codeniu-picbed.oss-cn-hangzhou.aliyuncs.com/picbed/202307141551187.jpg)
 
+## 开发
+
+```shell
+# 克隆项目
+git clone https://github.com/Codeniu/niu-cli.git
+
+# 进入到 packages\create-niu\template-vben1
+pnpm install
+
+# 启动
+pnpm dev
+
+```
+
+## 模板使用
+
+```shell
+npx @codeniu/create-niu <my-app>
+
+# 选择template-vben1
+
+cd my-app
+npm install
+```
+
+## 接口地址
+
+使用apifox模拟接口地址
+<https://9k88f52y15.apifox.cn/api-105740335>
+
+## Features
+
 ## 打包
 
-生产环境打包时注意：
+打包时注意：
 
-1. views/login/QrCodeLogin.vue 扫码登陆配置需要注意
+1. 微信扫码登陆配置需要注意修改地址
 
-2. vditor CDN 地址： <http://127.0.0.1/static/vditor/>位置：src\components\Markdown\src\Markdown.vue
+   views/login/QrCodeLogin.vue
+
+2. vditor CDN 地址： <http://127.0.0.1/static/vditor/>
+   位置：src\components\Markdown\src\Markdown.vue
 
 ## 目录描述
 

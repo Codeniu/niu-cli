@@ -20,7 +20,7 @@
 
   const suppliers = [
     {
-      title: '正在服务中的供应商',
+      title: '正在服务中',
       subtitle: '服务中',
       icon: 'zpgg',
       num: 123,
@@ -31,7 +31,7 @@
     },
 
     {
-      title: '正在进行评价的供应商',
+      title: '正在进行',
       subtitle: '评价中',
       icon: 'zpgg',
       num: 123,
@@ -42,7 +42,7 @@
     },
 
     {
-      title: '已完成评价的供应商',
+      title: '已完成',
       subtitle: '已完成',
       icon: 'zpgg',
       num: 123,

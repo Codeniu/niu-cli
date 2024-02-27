@@ -1,19 +1,17 @@
 import type { AppRouteModule } from '/@/router/types'
 
-import { USER_LAYOUT } from '/@/router/constant'
-// import { RoleEnum } from '/@/enums/roleEnum'
+import { NORMAL_LAYOUT } from '/@/router/constant'
 
 // token管理
 const user: AppRouteModule = {
   path: '/user',
   name: 'User',
-  component: USER_LAYOUT,
+  component: NORMAL_LAYOUT,
   redirect: '/user/user-manage',
   meta: {
     icon: 'user-manage',
     title: '用户管理',
-    orderNo: 15,
-    // roles: [RoleEnum.ZGH, RoleEnum.ZYZ],
+    orderNo: 4,
   },
   children: [
     {

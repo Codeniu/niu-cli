@@ -9,9 +9,14 @@
       </div>
     </a-tooltip>
 
-    <div v-if="isZGH" class="setting" @click="handelSettingClick">
+    <div class="setting" @click="openGithub">
+      <GithubFilled />
+    </div>
+
+    <div class="setting" @click="handelSettingClick">
       <SettingOutlined />
     </div>
+
     <div class="notify">
       <a-popover
         title=""
@@ -87,7 +92,12 @@
 </script>
 
 <script lang="ts" setup>
-  import { SettingOutlined, BellOutlined } from '@ant-design/icons-vue'
+  import {
+    SettingOutlined,
+    BellOutlined,
+    GithubOutlined,
+    GithubFilled,
+  } from '@ant-design/icons-vue'
   import { computed, defineComponent, onMounted, reactive, ref, toRaw } from 'vue'
   import { setOssAddress } from '/@/apis/sys/file'
   import { getHistoryTask, getTask } from '/@/apis/sys/notify'
@@ -170,7 +180,7 @@
   const go = useGo()
   const userInfo = toRaw(userStore.getUserInfo)
   const listData = ref<any>([])
-  const avatar = setOssAddress(userInfo.photo)
+  const avatar = userInfo.photo
   const userTitle = userInfo.userTitle
   const pagination = reactive({
     current: 1,
@@ -266,9 +276,13 @@
   }
 
   const handleHelp = () => {
-    const helpBookName = '工作室联盟管理员操作手册.pdf'
+    const helpBookName = 'XX操作手册.pdf'
     const helpBookSrc = setOssAddress(helpBookName)
     openWindow(helpBookSrc)
+  }
+
+  const openGithub = () => {
+    window.open('https://github.com/Codeniu/niu-cli')
   }
 </script>
 <style lang="less" scoped>

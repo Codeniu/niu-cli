@@ -11,7 +11,7 @@ const components: AppRouteModule = {
     hideChildrenInMenu: false,
     icon: 'code-apply',
     title: '组件',
-    orderNo: 100000,
+    orderNo: 2,
     hideMenu: false,
   },
   children: [

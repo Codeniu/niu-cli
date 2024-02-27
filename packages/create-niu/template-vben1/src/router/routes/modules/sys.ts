@@ -1,20 +1,19 @@
 import type { AppRouteModule } from '/@/router/types'
 
-import { LAYOUT } from '/@/router/constant'
-import { RoleEnum } from '/@/enums/roleEnum'
+import { NORMAL_LAYOUT } from '/@/router/constant'
 
 // 系统设置
 const settingManage: AppRouteModule = {
   path: '/setting',
   name: 'SettingPermission',
-  component: LAYOUT,
+  component: NORMAL_LAYOUT,
   redirect: '/setting/rolePermission',
   meta: {
     icon: '',
     title: '系统管理',
     orderNo: 15,
     hidenInNav: true, // 在导航栏中不显示，侧边栏显示子项
-    roles: [RoleEnum.ZGH],
+    roles: [],
   },
   children: [
     {
