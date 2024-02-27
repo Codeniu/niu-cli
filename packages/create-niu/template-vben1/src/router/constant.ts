@@ -20,6 +20,11 @@ export const PAGE_LAYOUT = () => import('/@/layouts/page/index.vue')
 export const NORMAL_LAYOUT = () => import('/@/layouts/normal/index.vue')
 
 /**
+ * @description: user layout
+ */
+export const USER_LAYOUT = () => import('/@/layouts/user/index.vue')
+
+/**
  * @description: parent-layout
  */
 export const getParentLayout = (_name?: string) => {

@@ -25,6 +25,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-regex": "^1.10.0",
+    "fast-glob": "^3.3.2",
     "pnpm": "^7.18.1",
     "prettier": "^2.8.1",
     "rollup": "^3.7.0",
