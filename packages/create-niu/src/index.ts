@@ -61,8 +61,13 @@ async function init() {
             value: 'template-express-mongo-ts'
           },
           {
-            title: blue('template-vben1'),
+            title: blue('template-vben1:后台管理项目模板'),
             value: 'template-vben1'
+          },
+          // 通用大屏项目模板
+          {
+            title: blue('template-vue-datav:通用大屏项目模板'),
+            value: 'template-vue-datav'
           }
         ]
       }
