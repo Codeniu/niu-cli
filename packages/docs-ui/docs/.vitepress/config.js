@@ -37,7 +37,21 @@ const config = {
     //   prev: '上篇',
     //   next: '下篇'
     // }
-  }
+  },
+
+  head: [
+    [
+      'script',
+      { id: 'clarity-analysis' },
+      `
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "m9rrsg0p2k");
+      `
+    ]
+  ]
 }
 
 export default config
