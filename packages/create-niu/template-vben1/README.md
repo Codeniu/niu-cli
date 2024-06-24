@@ -6,13 +6,13 @@ noed > 16.18.0
 
 技术栈：
 
-- Vue 3
+- Vue 3.4.30
 - Typescript
 - Vite
 
 ui 库 :
 
-- [antdv 3.x](https://3x.antdv.com/components/overview-cn/)
+- [antdv 4.x](https://next.antdv.com/components/overview-cn/)
 - [windcss](https://windicss.org/)
 
 ## 预览
