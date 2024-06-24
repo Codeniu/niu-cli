@@ -1,20 +1,7 @@
 <template>
   <div class="sys-user">
-    <a-tooltip placement="top">
-      <template #title>
-        <span>操作手册</span>
-      </template>
-      <div class="help" @click="handleHelp">
-        <SvgIcon name="help" size="19" />
-      </div>
-    </a-tooltip>
-
     <div class="setting" @click="openGithub">
       <GithubFilled />
-    </div>
-
-    <div class="setting" @click="handelSettingClick">
-      <SettingOutlined />
     </div>
 
     <div class="notify">
@@ -92,92 +79,13 @@
 </script>
 
 <script lang="ts" setup>
-  import {
-    SettingOutlined,
-    BellOutlined,
-    GithubOutlined,
-    GithubFilled,
-  } from '@ant-design/icons-vue'
+  import { BellOutlined, GithubFilled } from '@ant-design/icons-vue'
   import { computed, defineComponent, onMounted, reactive, ref, toRaw } from 'vue'
-  import { setOssAddress } from '/@/apis/sys/file'
-  import { getHistoryTask, getTask } from '/@/apis/sys/notify'
-  import { useGo } from '/@/hooks/web/usePage'
-  import { usePermission } from '/@/hooks/web/usePermission'
   import { useUserStore } from '/@/store/modules/user'
   import EditPassword from './EditPassword.vue'
-  import SvgIcon from '/@/components/SvgIcon.vue'
   import { openWindow } from '/@/utils'
 
-  const { isZGH } = usePermission()
-
-  // 代办类型
-  const TASK_TYPE = [
-    {
-      key: '1',
-      code: 'CLOUD_CLASS',
-      label: '课程消息',
-      children: [
-        {
-          key: '101',
-          code: 'CLOUD_CLASS_APPLY',
-          label: '课程申请',
-          path: '/classroom/approval-detial',
-          isJoinId: true,
-        },
-      ],
-    },
-    {
-      key: '2',
-      code: 'STZX',
-      label: '师徒消息',
-      children: [
-        {
-          key: '201',
-          code: 'STZX_RELATION_APPROVE',
-          label: '师徒关系审核',
-          path: '/master/review',
-        },
-        {
-          key: '203',
-          code: 'STZX_RELATION_APPROVE',
-          label: '师徒协议书/任务书审核',
-          path: '/master/task',
-        },
-      ],
-    },
-    {
-      key: '3',
-      code: 'ZPGG',
-      label: '摘牌攻关',
-      children: [
-        {
-          key: '301',
-          code: 'ZPGG_CHECK_APPLY',
-          label: '摘牌攻关验收申请',
-        },
-        {
-          key: '302',
-          code: 'ZPGG_DELAY_APPLY',
-          label: '摘牌攻关延期申请',
-        },
-      ],
-    },
-    {
-      key: '4',
-      code: 'GOLD_POINT',
-      label: '金点子',
-      children: [
-        {
-          key: '401',
-          code: 'GOLD_POINT_REVIEW',
-          label: '金点子评审通知',
-        },
-      ],
-    },
-  ]
-
   const userStore = useUserStore()
-  const go = useGo()
   const userInfo = toRaw(userStore.getUserInfo)
   const listData = ref<any>([])
   const avatar = userInfo.photo
@@ -194,10 +102,7 @@
   onMounted(() => {
     getListData()
   })
-  // 跳转到设置页
-  const handelSettingClick = () => {
-    go('/setting')
-  }
+
   // login out
   function handleLoginOut() {
     userStore.confirmLoginOut()
@@ -221,35 +126,14 @@
   }
   // 获取代办列表
   async function getListData() {
-    // loading.value = true
-    // const funcType = activeKey.value === '1' ? getTask : getHistoryTask
-    // const { list, total } = await funcType({
-    //   pageNum: pagination.current,
-    //   pageSize: pagination.pageSize,
-    // })
-    // loading.value = false
-    // listData.value = list || []
-    // pagination.total = total
+    // todo fetch api
   }
   const count = computed(() => {
     return activeKey.value === '1' ? listData.value.length : 0
   })
   // 点击代办标题
   function handleTitleClick(item: any) {
-    const { classify, secondClassify, tableId, isDone } = toRaw(item)
-
-    if (isDone === '1') return
-
-    const tasktype: any = TASK_TYPE.find((item: any) => item.key === classify)?.children.find(
-      (item: any) => item.key === secondClassify,
-    )
     console.log(toRaw(item))
-    if (tasktype?.path) {
-      const path = tasktype.isJoinId ? `${tasktype?.path}/${tableId}` : `${tasktype?.path}`
-      go(path)
-      popoverVisible.value = false
-      getListData()
-    }
   }
   const getPagination = computed(() => {
     return {
@@ -275,14 +159,8 @@
     }
   }
 
-  const handleHelp = () => {
-    const helpBookName = 'XX操作手册.pdf'
-    const helpBookSrc = setOssAddress(helpBookName)
-    openWindow(helpBookSrc)
-  }
-
   const openGithub = () => {
-    window.open('https://github.com/Codeniu/niu-cli')
+    openWindow('https://github.com/Codeniu/niu-cli/tree/main/packages/create-niu/template-vben1')
   }
 </script>
 <style lang="less" scoped>

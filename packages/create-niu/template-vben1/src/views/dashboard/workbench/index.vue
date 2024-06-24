@@ -1,57 +1,23 @@
 <template>
-  <div class="workbench">
-    <div class="first">
-      <First />
-    </div>
-    <div class="second">
-      <Second />
-    </div>
-    <div class="third">
-      <Third />
-    </div>
-    <div class="four">4</div>
-    <div class="five">5</div>
+  <div class="app-container">
+    <h2>项目模板</h2>
+    <p> 技术栈 Vue 3 - Typescript - Vite - AntDesignVue </p>
+
+    <h2>系统设置</h2>
+    <img src="https://codeniu-picbed.oss-cn-hangzhou.aliyuncs.com/picbed/20240227114724.png" />
   </div>
 </template>
 
-<script lang="ts" setup>
-  import First from './First.vue'
-  import Second from './Second/index.vue'
-  import Third from './Third/index.vue'
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({
+    name: 'About',
+  })
 </script>
 
 <style lang="less" scoped>
-  .workbench {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 2fr 3fr;
-    gap: 20px 20px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      'first first third'
-      'second second third'
-      'four five five';
-  }
-
-  .first {
-    grid-area: first;
-  }
-
-  .second {
-    grid-area: second;
-  }
-
-  .third {
-    grid-area: third;
-  }
-
-  .four {
-    grid-area: four;
-    background-color: red;
-  }
-
-  .five {
-    grid-area: five;
+  img {
+    width: 50%;
+    height: 50%;
   }
 </style>

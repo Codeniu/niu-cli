@@ -10,10 +10,10 @@ const settingManage: AppRouteModule = {
   component: LAYOUT,
   redirect: '/setting/org',
   meta: {
-    icon: 'nav-setting',
+    icon: 'nav-role',
     title: '设置',
     orderNo: 15,
-    hidenInNav: true, // 在导航栏中不显示，侧边栏显示子项
+    // hidenInNav: true, // 在导航栏中不显示，侧边栏显示子项
     // roles: [RoleEnum.ZGH],
   },
   children: [
@@ -23,7 +23,7 @@ const settingManage: AppRouteModule = {
       component: () => import('/@/views/setting/org/index.vue'),
       meta: {
         title: '组织管理',
-        icon: '',
+        icon: 'nav-org',
         hideMenu: false,
       },
     },
@@ -33,7 +33,7 @@ const settingManage: AppRouteModule = {
       component: () => import('/@/views/setting/role/index.vue'),
       meta: {
         title: '角色管理',
-        icon: '',
+        icon: 'nav-role',
         hideMenu: false,
       },
     },
@@ -43,7 +43,7 @@ const settingManage: AppRouteModule = {
       component: () => import('/@/views/setting/menu/index.vue'),
       meta: {
         title: '菜单管理',
-        icon: '',
+        icon: 'nav-role',
         hideMenu: false,
       },
     },
@@ -53,7 +53,7 @@ const settingManage: AppRouteModule = {
       component: () => import('/@/views/setting/admin/index.vue'),
       meta: {
         title: '账号管理',
-        icon: '',
+        icon: 'studio-integral',
       },
     },
   ],

@@ -17,7 +17,6 @@
   import PNG from '/@/assets/images/file-type/png.png'
   import No from '/@/assets/images/file-type/no.png'
   import { downloadByUrl } from '/@/utils/file/download'
-  import { setOssAddress } from '/@/apis/sys/file'
 
   const IMAGES: { [key: string]: any } = {
     ppt: PPT,
@@ -85,7 +84,7 @@
         // emit('handleDownload', { file: props.file, filesrc: props.filesrc })
 
         downloadByUrl({
-          url: setOssAddress(filesrc),
+          url: filesrc,
           // target: '_self',
         })
       }
