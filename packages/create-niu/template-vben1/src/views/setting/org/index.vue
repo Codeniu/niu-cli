@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <a-modal :visible="uploadVisibles" title="导入文件" width="800px">
+        <a-modal :open="uploadVisibles" title="导入文件" width="800px">
           <template #footer>
             <a-button key="back" @click="onCancel">取消</a-button>
             <a-button key="submit" type="primary" :loading="loading" @click="onSubmit">
@@ -66,13 +66,13 @@
   </div>
 
   <EditMoal
-    v-model:visible.sync="editMoalVisible"
+    v-model:open="editMoalVisible"
     :record="currentRecord"
     :modal-type="modalType"
     @refresh="onSearch"
   />
 
-  <ViewModal v-model:visible.sync="viewMoalVisible" :record="currentRecord" />
+  <ViewModal v-model:open="viewMoalVisible" :record="currentRecord" />
 </template>
 
 <script lang="ts" setup>

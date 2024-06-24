@@ -66,7 +66,7 @@
       </a-table>
     </div>
     <EditMoal
-      v-model:visible.sync="editMoalVisible"
+      v-model:open="editMoalVisible"
       :record="currentRecord"
       :is-edit="isEditModal"
       @refresh="onSearch"

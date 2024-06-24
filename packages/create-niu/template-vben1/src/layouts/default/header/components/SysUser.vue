@@ -8,7 +8,7 @@
       <a-popover
         title=""
         trigger="click"
-        :visible="popoverVisible"
+        :open="popoverVisible"
         @visible-change="handleClickChange"
       >
         <a-badge :count="count" dot>
@@ -70,7 +70,7 @@
       </template>
     </a-dropdown>
   </div>
-  <EditPassword v-model:visible.sync="editPassowrdVisible" @logOut="handleLoginOut" />
+  <EditPassword v-model:open="editPassowrdVisible" @logOut="handleLoginOut" />
 </template>
 <script lang="ts">
   defineComponent({

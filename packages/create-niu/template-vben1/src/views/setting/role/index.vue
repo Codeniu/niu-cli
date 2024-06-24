@@ -24,17 +24,12 @@
       </a-table>
     </div>
 
-    <EditMoal
-      v-model:visible.sync="editMoalVisible"
-      :record="currentRecord"
-      :modal-type="modalType"
-      @refresh="onSearch"
-    />
+    <EditMoal :record="currentRecord" :modal-type="modalType" @refresh="onSearch" />
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { onMounted, ref, toRaw } from 'vue'
+  import { onMounted, ref, toRaw, provide } from 'vue'
   import EditMoal from './components/EditModal.vue'
   import { ModalTypeEnum, columns } from './role.data'
 
@@ -45,6 +40,8 @@
   const modalType = ref(ModalTypeEnum.ADD)
   const dataSource = ref<any>([])
   const currentRecord = ref()
+
+  provide('open', editMoalVisible)
 
   onMounted(() => {
     onSearch()

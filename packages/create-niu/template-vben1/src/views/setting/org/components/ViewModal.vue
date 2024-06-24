@@ -4,7 +4,7 @@
     @cancel="onCancel"
     :confirmLoading="confirmLoading"
     width="780px"
-    :visible="visible"
+    :open="visible"
     :footer="null"
   >
     <a-form ref="formRef" :model="formState" :label-col="{ span: 4 }" :wrapper-col="{ span: 18 }">

@@ -1,7 +1,7 @@
 <template>
   <FileAnnotation v-bind="$attrs" @handle-name="onHandleName" />
 
-  <a-modal title="附件预览" width="1200px" v-model:visible="previewVisible" :footer="null">
+  <a-modal title="附件预览" width="1200px" :open="previewVisible" :footer="null">
     <a-spin :spinning="previewLoading" tip="加载中...">
       <div style="max-height: 600px; min-height: 200px; overflow: auto">
         <LazyContainer class="text-center">

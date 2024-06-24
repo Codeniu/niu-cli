@@ -4,7 +4,7 @@
       <a-popover
         placement="bottomLeft"
         trigger="click"
-        v-model="visible"
+        v-model:open="visible"
         overlayClassName="icon-picker-popover"
       >
         <template #title>

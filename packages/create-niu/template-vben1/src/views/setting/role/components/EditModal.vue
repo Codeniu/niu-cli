@@ -5,7 +5,7 @@
     @cancel="onCancel"
     :confirmLoading="confirmLoading"
     width="780px"
-    :visible="visible"
+    :open="open"
   >
     <a-form
       ref="formRef"
@@ -45,20 +45,19 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed, reactive, ref, toRaw, watch } from 'vue'
+  import { computed, inject, reactive, ref, toRaw, watch } from 'vue'
   import { ModalTypeEnum } from '../role.data'
   // import { queryMenuByRoleList } from '/@/apis/setting/role'
   import MenuTree from './MenuTree.vue'
   import { addRole, saveRoleMenu } from '/@/apis/setting/role'
 
-  const emit = defineEmits(['update:visible', 'refresh'])
+  const emit = defineEmits(['update:open', 'refresh'])
   const props = defineProps({
     modalType: String,
     record: {
       type: Object,
       default: () => {},
     },
-    visible: Boolean,
   })
   const formRef = ref()
   const confirmLoading = ref<boolean>(false)
@@ -82,8 +81,10 @@
     menus.value = keys
   }
 
+  const open: any = inject('open')
+
   watch(
-    () => props.visible,
+    () => open.value,
     async (val) => {
       if (val) {
         Object.assign(formState, { ...toRaw(props.record) })
@@ -119,7 +120,7 @@
         await addRole({ menuIds: menus.value, roleName, roleKey })
       }
       confirmLoading.value = false
-      emit('update:visible', false)
+      open.value = false
       emit('refresh')
     } catch (error) {
       console.log('error: ', error)
@@ -127,8 +128,11 @@
   }
 
   function onCancel() {
+    console.log('cancel')
+
     formRef.value.resetFields()
-    emit('update:visible', false)
+    // emit('update:open', false)
+    open.value = false
   }
 </script>
 

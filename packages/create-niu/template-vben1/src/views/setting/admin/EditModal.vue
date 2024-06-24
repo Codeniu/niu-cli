@@ -5,7 +5,7 @@
     @cancel="onCancel"
     :confirmLoading="confirmLoading"
     width="800px"
-    :visible="visible"
+    :open="visible"
   >
     <a-form
       ref="formRef"

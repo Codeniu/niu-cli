@@ -6,7 +6,6 @@ import { setupStore } from '/@/store'
 import { router, setupRouter } from '/@/router'
 import { setupRouterGuard } from '/@/router/guard'
 import 'virtual:windi.css'
-import 'ant-design-vue/dist/antd.css'
 import { registerGlobAntd } from '/@/components/registerGlobComp'
 import { setupGlobDirectives } from '/@/directives/index'
 
