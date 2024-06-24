@@ -39,6 +39,7 @@ const config = {
     // }
   },
 
+  // clarity 网站分析
   head: [
     [
       'script',
