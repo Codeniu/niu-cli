@@ -1,3 +1,4 @@
+// 导入组件
 import BasicTitle from './BasicTitle/index.vue'
 import NDivider from './Divider/index.vue'
 import NNav from './Nav/index.vue'
@@ -8,8 +9,34 @@ import NSteps from './Steps/index.vue'
 import MileStone from './Steps/demo/index.vue'
 import FlowNotice from './FlowNotice/demo.vue'
 import EmojiSelectDemo from './EmojiSelect/demo.vue'
+import NQuizTimerButton from './QuizTimerButton/index.vue'
+
+// 组件列表配置
+const components = {
+  BasicTitle,
+  NDivider,
+  NNav,
+  NPicWrap,
+  NComment,
+  NRadioButton,
+  NSteps,
+  MileStone,
+  FlowNotice,
+  EmojiSelectDemo,
+  NQuizTimerButton
+}
 
 // 导出单独组件
+export { components as default }
+
+// Vue插件安装函数
+export function install(app) {
+  Object.entries(components).forEach(([name, component]) => {
+    app.component(component.name || name, component)
+  })
+}
+
+// 导出独立组件
 export {
   BasicTitle,
   NDivider,
@@ -20,25 +47,6 @@ export {
   NSteps,
   MileStone,
   FlowNotice,
-  EmojiSelectDemo
-}
-
-// 引用
-export default {
-  install(app) {
-    app.component(BasicTitle.name, BasicTitle)
-
-    app.component('NDivider', NDivider)
-    app.component('NNav', NNav)
-    app.component('NPicWrap', NPicWrap)
-    app.component('NComment', NComment)
-    app.component('NRadioButton', NRadioButton)
-
-    app.component('NSteps', NSteps)
-    app.component('MileStone', MileStone)
-
-    app.component('FlowNotice', FlowNotice)
-
-    app.component('EmojiSelectDemo', EmojiSelectDemo)
-  }
+  EmojiSelectDemo,
+  NQuizTimerButton
 }
