@@ -20,6 +20,7 @@
     "@vueuse/core": "^7.7.1",
     "ant-design-vue": "^4.2.3",
     "axios": "^0.26.1",
+    "dayjs": "^1.11.7",
     "echarts": "^5.3.1",
     "jsencrypt": "^3.3.2",
     "lodash-es": "^4.17.21",
