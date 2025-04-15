@@ -8,8 +8,11 @@ import NRadioButton from './RadioButtonGroup/demo.vue'
 import NSteps from './Steps/index.vue'
 import MileStone from './Steps/demo/index.vue'
 import FlowNotice from './FlowNotice/demo.vue'
-import EmojiSelectDemo from './EmojiSelect/demo.vue'
-import NQuizTimerButton from './QuizTimerButton/index.vue'
+import EmojiSelect from './EmojiSelect/index.vue'
+import QuizTimerButton from './QuizTimerButton/index.vue'
+import LineClamp from './LineClamp/index.vue'
+import CircleProgress from './CircleProgress/index.vue'
+import CircleProgressDemo from './CircleProgress/demo.vue'
 
 // 组件列表配置
 const components = {
@@ -22,8 +25,11 @@ const components = {
   NSteps,
   MileStone,
   FlowNotice,
-  EmojiSelectDemo,
-  NQuizTimerButton
+  EmojiSelect,
+  QuizTimerButton,
+  LineClamp,
+  CircleProgress,
+  CircleProgressDemo
 }
 
 // 导出单独组件
@@ -47,6 +53,9 @@ export {
   NSteps,
   MileStone,
   FlowNotice,
-  EmojiSelectDemo,
-  NQuizTimerButton
+  EmojiSelect,
+  QuizTimerButton,
+  LineClamp,
+  CircleProgress,
+  CircleProgressDemo
 }

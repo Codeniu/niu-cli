@@ -13,7 +13,8 @@ const config = {
     siteTitle: 'NiuUI',
     nav: [
       { text: 'About', link: '/about' },
-      { text: 'Components', link: componentItmes[0].link }
+      { text: '组件', link: componentItmes[0].link },
+      { text: '更新日志', link: '/change-log' }
     ],
     sidebar: [
       {
